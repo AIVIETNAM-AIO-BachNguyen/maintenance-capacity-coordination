@@ -34,3 +34,7 @@ A genuinely new experiment needs evidence of an operational decision absent from
 ## Subsequent distinct robustness question (2026-10-22)
 
 The no-go above rules out another scorer/loss/seed search to rescue v6. A different, source-grounded question is now locked in `capacity_transfer_check_v7.md`: whether the **already-trained** v3 shared machine/worker PPO is more robust than its flat same-information PPO control when N4/K2 technician service durations change within the existing `family_configs("full")` contract. The configuration family and actor inputs already support those durations; no physics, reward, request set, model or checkpoint is changed for the bounded pilot. This is a test of a deployment robustness property, not a reversal of any v3/v6 gate or a claim of pre-start reservations. Its stringent gate includes the original v3 practical threshold and a numerical-commitment ablation. Failure ends this direction without a new TEST.
+
+## V7 robustness check outcome (2026-10-22)
+
+The separately locked v7 service-duration check is closed with replay-audited no-go; see `capacity_transfer_v7_findings.md`. Frozen v3 S had a target S−G3 gain on reciprocal scale 1 but a loss on specialist/generalist scale 3, no material overall transfer improvement, and almost no difference from numerical-time ablation R. This leaves the post-v6 condition above intact: no further same-contract scorer/seed campaign is justified without evidence of a distinct operational or deployment requirement. No replication or new TEST opened.

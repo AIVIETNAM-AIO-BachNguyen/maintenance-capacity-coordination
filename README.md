@@ -75,4 +75,4 @@ The [audited v5 diagnostic](docs/pair_commitment_interaction_check_v5_findings.m
 
 ## Service-duration transfer diagnostic v7
 
-The [v7 proposal](docs/capacity_transfer_proposal_v7.md) and [prelocked protocol](docs/capacity_transfer_check_v7.md) specify a bounded zero-shot robustness test of frozen v3 structured and flat PPO checkpoints on existing N4/K2 service-duration variants. This is a new paired physical panel under unchanged physics, not a revision of v3/v6 failed gates. No v7 scientific outcome or TEST is open yet.
+The [v7 proposal](docs/capacity_transfer_proposal_v7.md) and [prelocked protocol](docs/capacity_transfer_check_v7.md) tested frozen v3 structured and flat PPO checkpoints on existing N4/K2 service-duration variants. The [audited findings](docs/capacity_transfer_v7_findings.md) show a gain for S on one target but a loss on the other, no material transfer improvement and no numerical remaining-time ablation benefit. The v7 gate failed; no independent training replication or new TEST opened.
