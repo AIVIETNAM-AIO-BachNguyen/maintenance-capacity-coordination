@@ -251,10 +251,16 @@ def audit_interactions(run, training_run, seeds, roots, control):
                                 "interaction score error replay")
                 forecasts += diag["forecast_transitions"]
                 env.step(submissions, ACTIONS.index(matching))
-            compare_physical(control[case, "F_rollout", None, seed],
+            actual_control = control[case, "F_rollout", None, seed]
+            replay_metrics = env.metrics()
+            require(set(replay_metrics) - set(actual_control)
+                    == {"legal_service_waits", "request_creation_free_compatible_mean"},
+                    "legacy F2 diagnostic schema")
+            compare_physical(actual_control,
                              {"case": case, "seed": seed,
                               "physical_seed": role_seed(seed, VERSION + ":physical"),
-                              **env.metrics()}, "interaction F2 physical replay")
+                              **{key: value for key, value in replay_metrics.items()
+                                 if key in actual_control}}, "interaction F2 physical replay")
     return rows, forecasts
 
 
