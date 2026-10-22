@@ -72,3 +72,7 @@ The [v4 proposal](docs/forecast_demand_commitment_proposal_v4.md) and [prelocked
 ## Joint service-start interaction and v6 pilot
 
 The [audited v5 diagnostic](docs/pair_commitment_interaction_check_v5_findings.md) found bounded six-tick forecast headroom for simultaneous service starts. The [v6 proposal](docs/joint_demand_capacity_proposal_v6.md) and [locked protocol](docs/joint_demand_capacity_pilot_v6.md) tested a learned two-edge scorer against additive and flat same-data controls, with F2, frozen V14, risk matching and fixed G/D checkpoints on the same physical panel. [Audited v6 findings](docs/joint_demand_capacity_pilot_v6_findings.md) show J6's large gain over a collapsed additive ablation but worse realized cost than the flat full-information student and worse pair-score fidelity than required. The v6 gate failed; no independent training replication or v6 TEST opened. The [post-v6 formulation decision](docs/post_v6_formulation_decision.md) explains why another same-contract scorer campaign is not justified by these outcomes.
+
+## Service-duration transfer diagnostic v7
+
+The [v7 proposal](docs/capacity_transfer_proposal_v7.md) and [prelocked protocol](docs/capacity_transfer_check_v7.md) specify a bounded zero-shot robustness test of frozen v3 structured and flat PPO checkpoints on existing N4/K2 service-duration variants. This is a new paired physical panel under unchanged physics, not a revision of v3/v6 failed gates. No v7 scientific outcome or TEST is open yet.

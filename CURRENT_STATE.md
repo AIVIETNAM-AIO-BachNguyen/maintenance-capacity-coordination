@@ -1,6 +1,6 @@
 # Current state
 
-Date: 2026-10-22, Asia/Taipei. One current scientific experiment: the prelocked v6 joint demand–capacity score pilot. Its audited findings are in `docs/joint_demand_capacity_pilot_v6_findings.md`; final source commit `cd470f9` is on `codex/joint-demand-capacity-v6`.
+Date: 2026-10-22, Asia/Taipei. The audited v6 joint demand–capacity score pilot is closed; its findings are in `docs/joint_demand_capacity_pilot_v6_findings.md`. The one current experiment is the prelocked v7 service-duration transfer diagnostic on branch `codex/capacity-transfer-v7`.
 
 - V1 binary-requester pilot and its authorized 32-seed sealed TEST are complete and closed. C beat learned always-request D, but did not establish a stable capacity-feedback advantage over matched/full-information and strong controls. Its labelled “replication” was held-out evaluation of fixed checkpoints, not independent training replication.
 - V2 early-PM headroom missed its locked forecast gain gate (−0.44 versus −2.0); no learner followed. V3 structured PPO missed its practical S−G3 gate (−22.27 versus −30) and numerical remaining-time ablation benefit (S−R −0.22). V4 structured forecast distillation missed its structural, commitment-context and F2 fidelity gates. Their failed gates and raw artifacts remain preserved; no corresponding independent training replication or new TEST is open.
@@ -10,4 +10,4 @@ Date: 2026-10-22, Asia/Taipei. One current scientific experiment: the prelocked 
 
 ## Next research decision
 
-V6 is closed. The desired validated maintenance-demand/technician-capacity coordination benefit remains unproven. The source-grounded decision in `docs/post_v6_formulation_decision.md` finds no justified same-contract architecture campaign. Next, establish whether the target operation has a binding pre-start service/technician commitment absent from the simulator. If it does, specify its real decision order and consequences before a new versioned contract and bounded headroom protocol; otherwise retain the negative/mixed result. Do not tune v6 or open TEST.
+V6 is closed. The desired validated capacity-coordination benefit remains unproven. One distinct next experiment is prelocked in `docs/capacity_transfer_check_v7.md`: evaluate the already-selected v3 structured S, numerical-time ablation R and flat G3 checkpoints on preselected N4/K2 service-duration shifts, using new paired physical seeds. This tests robustness within unchanged physics; it is not another scorer or revised v3/v6 gate. Implement tests/auditor and bounded Ubuntu smoke, commit/push verified source, then run only the locked pilot and audit. New training replication depends on the written gate; no TEST is authorized.
