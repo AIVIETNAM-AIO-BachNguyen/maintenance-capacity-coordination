@@ -50,8 +50,16 @@ def second_step_tv(policy, decision):
         p_updated = torch.softmax(updated[0, valid], 0)
         p_frozen = torch.softmax(frozen[0, valid], 0)
         tv = float(.5 * (p_updated - p_frozen).abs().sum())
-        max_score_delta = float((updated[0, valid] - frozen[0, valid]).abs().max())
-    return tv, max_score_delta
+        score_delta = updated[0, valid] - frozen[0, valid]
+        max_score_delta = float(score_delta.abs().max())
+        updated_top = torch.topk(updated[0, valid], 2).values
+        updated_margin = float(updated_top[0] - updated_top[1])
+        edge_count = int(feasible.sum())
+        edge_rank_changed = (edge_count > 1 and not torch.equal(
+            torch.argsort(updated[0, :STOP][feasible[0]]), torch.argsort(frozen[0, :STOP][feasible[0]])))
+    return dict(tv=tv, max_score_delta=max_score_delta,
+                updated_margin=updated_margin, second_feasible_edges=edge_count,
+                edge_rank_changed=bool(edge_rank_changed))
 
 
 def main():
@@ -102,7 +110,8 @@ def main():
                     env.reset(seed)
                     opportunities = changed_second = changed_matching = 0
                     trained_first_changed = trained_matching_changed = 0
-                    tv_values, score_deltas = [], []
+                    tv_values, score_deltas, margins = [], [], []
+                    one_edge = multiple_edges = edge_rank_changes = near_margin = 0
                     for _ in range(48):
                         active_decision = choose(active, env, deterministic=True)
                         frozen_decision = choose(frozen, env, deterministic=True)
@@ -115,8 +124,13 @@ def main():
                         sensitivity = second_step_tv(active, active_decision)
                         if sensitivity is not None:
                             opportunities += 1
-                            tv_values.append(sensitivity[0])
-                            score_deltas.append(sensitivity[1])
+                            tv_values.append(sensitivity["tv"])
+                            score_deltas.append(sensitivity["max_score_delta"])
+                            margins.append(sensitivity["updated_margin"])
+                            one_edge += sensitivity["second_feasible_edges"] == 1
+                            multiple_edges += sensitivity["second_feasible_edges"] > 1
+                            edge_rank_changes += sensitivity["edge_rank_changed"]
+                            near_margin += sensitivity["updated_margin"] <= 2 * sensitivity["max_score_delta"]
                             if active_decision["tokens"][1] != frozen_decision["tokens"][1]:
                                 changed_second += 1
                         if active_decision["matching"] != frozen_decision["matching"]:
@@ -127,12 +141,20 @@ def main():
                     row = {"case": case, "train_root": root, "seed": seed,
                            "checkpoint_sha256": selected["checkpoint_sha256"],
                            "second_step_opportunities": opportunities,
+                           "one_edge_second_opportunities": one_edge,
+                           "multiple_edge_second_opportunities": multiple_edges,
+                           "second_edge_rank_changes": edge_rank_changes,
+                           "margin_within_two_max_logit_deltas": near_margin,
                            "changed_second_token": changed_second,
                            "changed_final_matching": changed_matching,
                            "trained_C8_D8_first_token_difference": trained_first_changed,
                            "trained_C8_D8_final_matching_difference": trained_matching_changed,
                            "mean_second_step_tv": float(np.mean(tv_values)) if tv_values else None,
                            "mean_second_step_max_logit_delta": float(np.mean(score_deltas)) if score_deltas else None,
+                           "mean_second_step_top_margin": float(np.mean(margins)) if margins else None,
+                           "sum_second_step_tv": float(np.sum(tv_values)),
+                           "sum_second_step_max_logit_delta": float(np.sum(score_deltas)),
+                           "sum_second_step_top_margin": float(np.sum(margins)),
                            "C8_H_tail_cost": expected["objective"]}
                     pilot.append_jsonl(output / "episodes.jsonl", row)
                     rows.append(row)
@@ -140,12 +162,20 @@ def main():
         summary = {"episodes": len(rows), "H_states": len(rows) * 48,
                    "by_case": {case: {
                        "second_step_opportunities": sum(r["second_step_opportunities"] for r in rows if r["case"] == case),
+                       "one_edge_second_opportunities": sum(r["one_edge_second_opportunities"] for r in rows if r["case"] == case),
+                       "multiple_edge_second_opportunities": sum(r["multiple_edge_second_opportunities"] for r in rows if r["case"] == case),
+                       "second_edge_rank_changes": sum(r["second_edge_rank_changes"] for r in rows if r["case"] == case),
+                       "margin_within_two_max_logit_deltas": sum(r["margin_within_two_max_logit_deltas"] for r in rows if r["case"] == case),
                        "changed_second_token": sum(r["changed_second_token"] for r in rows if r["case"] == case),
                        "changed_final_matching": sum(r["changed_final_matching"] for r in rows if r["case"] == case),
                        "trained_C8_D8_first_token_difference": sum(r["trained_C8_D8_first_token_difference"] for r in rows if r["case"] == case),
                        "trained_C8_D8_final_matching_difference": sum(r["trained_C8_D8_final_matching_difference"] for r in rows if r["case"] == case),
-                       "mean_second_step_tv": float(np.mean([r["mean_second_step_tv"] for r in rows
-                                                              if r["case"] == case and r["mean_second_step_tv"] is not None])),
+                       "mean_second_step_tv": sum(r["sum_second_step_tv"] for r in rows if r["case"] == case) /
+                           sum(r["second_step_opportunities"] for r in rows if r["case"] == case),
+                       "mean_second_step_max_logit_delta": sum(r["sum_second_step_max_logit_delta"] for r in rows if r["case"] == case) /
+                           sum(r["second_step_opportunities"] for r in rows if r["case"] == case),
+                       "mean_second_step_top_margin": sum(r["sum_second_step_top_margin"] for r in rows if r["case"] == case) /
+                           sum(r["second_step_opportunities"] for r in rows if r["case"] == case),
                    } for case in pilot.CASES}}
         pilot.write_json(output / "summary.json", summary)
         manifest["status"] = "COMPLETED"
