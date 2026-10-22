@@ -47,3 +47,14 @@ uv run python experiments/audit_pilot_test_v1.py --training-run artifacts/PILOT_
 ## Attribution follow-up
 
 A [versioned fixed-threshold requester diagnostic](docs/threshold_requester_diagnostic_v1.md) tested the open question left by the pilot: whether C's gain over always-request D came from learned capacity-aware demand or simply gating PM requests. The [audited findings](docs/threshold_requester_diagnostic_findings.md) favor fixed threshold gating at this budget. This follow-up is exploratory and did not change the sealed pilot v1 TEST decision or its analysis.
+
+## Revised demand and technician-commitment direction
+
+The [v2 proposal](docs/demand_capacity_commitment_proposal_v2.md) distinguishes machine demand representation from the physical matching decision. Its [prelocked bounded headroom check](docs/commitment_headroom_v2.md) tested whether just-in-time early PM choices improve over strong threshold plus rollout on paired current states and independent common forecasts. The [audited findings](docs/commitment_headroom_v2_findings.md) show a small six-tick forecast gain below the locked minimum; the v2 learning-pilot gate failed and no structured learner was trained. The check is not an H+tail policy comparison or an optimality result.
+
+```bash
+uv run --extra dev pytest -q
+uv run python -m experiments.audit_commitment_headroom_v2 --run artifacts/commitment_headroom_v2_check_20261022T070841552901Z
+```
+
+The v1 `replicate` command above evaluated fixed trained checkpoints on fresh physical seeds; independent training replication would require new training seeds and fresh models. No new TEST is authorized.

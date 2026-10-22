@@ -1,33 +1,19 @@
 # Research brief
 
-## Objective
+## Current objective
 
-Develop and evaluate a framework coordinating machine maintenance demand with heterogeneous technician capacity. A standard RL algorithm is acceptable; inventing a new RL optimizer is not the objective.
+Develop and evaluate a framework that coordinates each machine's maintenance need/value representation with heterogeneous technician capacity and current service commitments. The operational decision is whether to keep a machine productive and exposed to future failure or start service that causes downtime and occupies a particular technician for multiple ticks. A standard PPO/centralized-training algorithm is sufficient; a new optimizer is not required.
 
-Main question: does organizing learning into machine demand decisions and resource allocation improve economic outcomes, learning efficiency or robustness compared with matched-information centralized and always-request baselines?
+The research question is whether a useful machine-demand representation combined with skill, service-duration and busy-commitment information improves economic decisions, sample efficiency or robustness against strong same-information, same-action-set controls. A machine embedding alone is a structured centralized policy, not a separate machine actor or a calibrated economic value. Do not add a redundant binary requester action merely to call the design MARL.
 
-## Candidate framework
+## Evidence so far
 
-Shared machine policies express PM demand using local health and present capacity information. A coordinator chooses feasible partial machine-technician matchings or WAIT. CM is automatic after failure and cannot be concealed. Service remains non-preemptive. Information, message semantics and request lifecycle must be specified before training. An embedding-only machine module is a structured centralized policy, not automatically a separate MARL actor.
+Pilot v1 implemented shared binary PM requesters and a fully informed masked coordinator on unchanged physics. Its sealed TEST confirmed lower H+tail cost for capacity-aware C than learned always-request D, but C did not establish a stable capacity-feedback advantage over local B, centralized E, frozen V14, risk matching or rollout. The separate exploratory G diagnostic found fixed threshold requests plus learned coordinator better than C on its own panel. Under the pilot budget B/C under-requested and D over-served; these observations do not prove machine information or PPO intrinsically useless. V1's labelled “replication” was held-out physical evaluation of existing checkpoints, not training replication. V1 TEST is closed to all new design choices.
 
-There is no established operational restriction hiding machine health from the coordinator. Do not invent one to make agents necessary. Full-information centralized control is an essential comparator.
+The first revised design, `docs/demand_capacity_commitment_proposal_v2.md`, preserved threshold requests but allowed just-in-time PM submission for an extra healthy machine selected for immediate service. Its sole prelocked headroom check on F2-visited states and common independent forecasts passed audit but failed the minimum-effect gate: expanded decisions improved six-tick holdout forecast cost by only 0.44 units versus a required 2.0. See `docs/commitment_headroom_v2_findings.md`. No v2 learner or scientific learning pilot was opened.
 
-## Established limitation
+## Research constraints and next step
 
-Under the inherited contract, PM submission is free, does not stop a machine or reserve a worker, and extra requests can be ignored. Always-request plus a sufficiently expressive informed coordinator can emulate other requester schedules. This limits claims of requester necessity, but does not prove equal optimization or sample efficiency for finite learned policies.
+Keep the simulator's failure law, restoration, technician skills, non-preemptive service, automatic CM and economic objective intact. Do not create fees, forced shutdowns, health concealment or future-event inputs. A coordinator must retain feasible matching/WAIT choices; any new action-set or operational contract must be versioned and separated from architecture effects. Full-information centralized PPO, threshold + learned coordinator G, always-request + learned coordinator D, direct-health representation, frozen V14, risk matching and rollout are required controls or clearly labelled external references for a qualified pilot. Compare matched information, action set, parameter/sample budgets, forecast compute and wall time.
 
-The old forced-action screen found physical/cost equality on eight paired traces. A synthetic capacity witness found different optimal service starts under different competing demand. Neither is a trained-framework result. Details and scope are in docs/KNOWN_FINDINGS.md.
-
-## Research scope
-
-1. Specify roles, observations, action timing, persistent request semantics and the common objective.
-2. Prelock a bounded pilot comparing threshold + frozen V14, learned local requester, capacity-aware requester, always-request + learned coordinator, and full-information centralized RL. Add fixed-requester controls to isolate coordinator learning.
-3. Match information and report model size, environment samples, forecast use and wall time. Distinguish information gains from architecture/optimization gains.
-4. Measure total H+tail cost, availability, failures, queues/backlog, service starts, WAIT, learning curves and runtime across training and physical seeds.
-5. Expand size/skill structure only after an implemented adapter/decoder and compatible baselines exist. Report retraining separately from zero-shot transfer.
-
-Do not add request fees, forced shutdowns, reward shaping or hidden health restrictions merely to create a positive result. Do not claim novelty or successful coordination without ablations and supporting results.
-
-## Success and limits
-
-A useful result establishes a clear operating contract and reproducible evidence about when coordination helps or is redundant. A negative pilot is valid and must be retained. Paper novelty and NSTC acceptance are not assumed. Old V14-V20 performance gates are historical, not active success criteria here; lock project-specific scientific gates before new full outcomes.
+The next step is a new falsifiable formulation that addresses a material long-term service-commitment limitation left by strong threshold-plus-rollout control. Before another run, lock its question, mechanism, common action set, metrics, new raw and derived seed roles, training/selection/DEV/independent training replication/TEST roles, budgets, checkpoint rule, gates, artifact schema and uncertainty analysis. Physical episodes sharing a tape are paired clusters; training seeds are separate sources of variation. A new TEST requires separate user authorization. Do not expand N/K until the decoder, environment and strong controls support it. A negative result is retained rather than repaired by unplanned modules or revised gates.
