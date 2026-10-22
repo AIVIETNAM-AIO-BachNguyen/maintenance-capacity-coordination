@@ -1,0 +1,166 @@
+"""Post-pilot descriptive mechanism check; never changes the locked v8 gate.
+
+On each audited C8-visited held-out state, compare the selected C8 checkpoint
+with its own identical weights but frozen within-tick context. Only the C8
+matching is physically executed. This is a state-level sensitivity analysis,
+not an economic counterfactual rollout or independent training replication.
+"""
+from __future__ import annotations
+
+from datetime import datetime, timezone
+import json
+from pathlib import Path
+import time
+
+import numpy as np
+import torch
+from tqdm.auto import tqdm
+
+from ht_pdm_fjsp.maintenance_framework_v1 import configs
+from maintenance_capacity_coordination.coordination_v1 import CoordinationEnv
+from maintenance_capacity_coordination.same_tick_policy_v8 import EDGES, STOP, SequencePolicy, choose
+from experiments import same_tick_pilot_v8 as pilot
+
+ROOT = Path(__file__).resolve().parents[1]
+TRAIN = ROOT / "artifacts/same_tick_v8_train_20261022T143004651031Z"
+HELDOUT = ROOT / "artifacts/same_tick_v8_heldout_20261022T143941233791Z"
+
+
+def second_step_tv(policy, decision):
+    first = decision["tokens"][0] if decision["tokens"] else None
+    if first is None or first == STOP:
+        return None
+    machine = torch.from_numpy(decision["machine_obs"])[None]
+    worker = torch.from_numpy(decision["worker_obs"])[None]
+    initial = torch.from_numpy(decision["edge_mask"])[None]
+    used_m = torch.zeros((1, 4), dtype=torch.bool)
+    used_w = torch.zeros((1, 2), dtype=torch.bool)
+    selected = torch.zeros((1, STOP), dtype=torch.bool)
+    with torch.no_grad():
+        encoded = policy.actor.encode(machine, worker)
+        _, _, root_context = policy.actor.logits(encoded, initial, used_m, used_w, selected)
+        m, j = EDGES[first]
+        used_m[0, m], used_w[0, j], selected[0, first] = True, True, True
+        updated, feasible, _ = policy.actor.logits(encoded, initial, used_m, used_w, selected)
+        if not bool(feasible.any()):
+            return None
+        frozen, _, _ = policy.actor.logits(encoded, initial, used_m, used_w, selected,
+                                           frozen_context=root_context)
+        valid = torch.cat((feasible[0], torch.ones(1, dtype=torch.bool)))
+        p_updated = torch.softmax(updated[0, valid], 0)
+        p_frozen = torch.softmax(frozen[0, valid], 0)
+        tv = float(.5 * (p_updated - p_frozen).abs().sum())
+        max_score_delta = float((updated[0, valid] - frozen[0, valid]).abs().max())
+    return tv, max_score_delta
+
+
+def main():
+    torch.set_num_threads(1)
+    training = json.loads((TRAIN / "manifest.json").read_text())
+    heldout = json.loads((HELDOUT / "manifest.json").read_text())
+    assert training["status"] == heldout["status"] == "COMPLETED"
+    assert training["source_sha256"] == heldout["source_sha256"]
+    assert json.loads((TRAIN / "audit.json").read_text())["status"] == "PASS"
+    assert json.loads((HELDOUT / "audit.json").read_text())["status"] == "PASS"
+    assert json.loads((HELDOUT / "replication_go_decision.json").read_text())["go"] is False
+    for path, expected in training["source_sha256"].items():
+        assert pilot.sha256(ROOT / path) == expected, path
+    source_rows = [json.loads(x) for x in (HELDOUT / "heldout_episodes.jsonl").read_text().splitlines()]
+    original = {(r["case"], r["arm"], int(r["checkpoint"].split(":")[0]), r["seed"]): r
+                for r in source_rows}
+    output = ROOT / "artifacts" / ("same_tick_v8_mechanism_" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ"))
+    output.mkdir(exist_ok=False)
+    manifest = {"status": "RUNNING", "started_utc": datetime.now(timezone.utc).isoformat(),
+                "collection_commit": training["git_commit"],
+                "collection_manifest_sha256": pilot.sha256(TRAIN / "manifest.json"),
+                "heldout_manifest_sha256": pilot.sha256(HELDOUT / "manifest.json"),
+                "heldout_audit_sha256": pilot.sha256(HELDOUT / "audit.json"),
+                "analysis_source_sha256": pilot.sha256(Path(__file__)),
+                "protocol_sha256": training["protocol_sha256"],
+                "interpretation": "post-pilot descriptive; C8 checkpoint weights held fixed; no counterfactual physical execution or gate change"}
+    pilot.write_json(output / "manifest.json", manifest)
+    started = time.monotonic()
+    rows = []
+    try:
+        for case in pilot.CASES:
+            for root in pilot.TRAIN_ROOTS:
+                trial = TRAIN / f"{case}_C8_{root}"
+                selected = json.loads((trial / "selection.json").read_text())
+                checkpoint = trial / selected["checkpoint"]
+                assert pilot.sha256(checkpoint) == selected["checkpoint_sha256"]
+                active = pilot.load_policy(checkpoint)
+                d_trial = TRAIN / f"{case}_D8_{root}"
+                d_selected = json.loads((d_trial / "selection.json").read_text())
+                d_checkpoint = d_trial / d_selected["checkpoint"]
+                assert pilot.sha256(d_checkpoint) == d_selected["checkpoint_sha256"]
+                trained_d = pilot.load_policy(d_checkpoint)
+                frozen = SequencePolicy("D8")
+                frozen.load_state_dict(active.state_dict(), strict=True)
+                frozen.eval()
+                env = CoordinationEnv(configs()[case])
+                for seed in tqdm(pilot.HELDOUT_SEEDS, desc=f"v8 mechanism {case} {root}", leave=False):
+                    env.reset(seed)
+                    opportunities = changed_second = changed_matching = 0
+                    trained_first_changed = trained_matching_changed = 0
+                    tv_values, score_deltas = [], []
+                    for _ in range(48):
+                        active_decision = choose(active, env, deterministic=True)
+                        frozen_decision = choose(frozen, env, deterministic=True)
+                        trained_d_decision = choose(trained_d, env, deterministic=True)
+                        assert active_decision["tokens"][:1] == frozen_decision["tokens"][:1]
+                        if active_decision["tokens"][:1] != trained_d_decision["tokens"][:1]:
+                            trained_first_changed += 1
+                        if active_decision["matching"] != trained_d_decision["matching"]:
+                            trained_matching_changed += 1
+                        sensitivity = second_step_tv(active, active_decision)
+                        if sensitivity is not None:
+                            opportunities += 1
+                            tv_values.append(sensitivity[0])
+                            score_deltas.append(sensitivity[1])
+                            if active_decision["tokens"][1] != frozen_decision["tokens"][1]:
+                                changed_second += 1
+                        if active_decision["matching"] != frozen_decision["matching"]:
+                            changed_matching += 1
+                        env.step(active_decision["submissions"], active_decision["matching_index"])
+                    expected = original[case, "C8", root, seed]
+                    assert abs(env.metrics()["objective"] - expected["objective"]) < 1e-8
+                    row = {"case": case, "train_root": root, "seed": seed,
+                           "checkpoint_sha256": selected["checkpoint_sha256"],
+                           "second_step_opportunities": opportunities,
+                           "changed_second_token": changed_second,
+                           "changed_final_matching": changed_matching,
+                           "trained_C8_D8_first_token_difference": trained_first_changed,
+                           "trained_C8_D8_final_matching_difference": trained_matching_changed,
+                           "mean_second_step_tv": float(np.mean(tv_values)) if tv_values else None,
+                           "mean_second_step_max_logit_delta": float(np.mean(score_deltas)) if score_deltas else None,
+                           "C8_H_tail_cost": expected["objective"]}
+                    pilot.append_jsonl(output / "episodes.jsonl", row)
+                    rows.append(row)
+        assert len(rows) == len(pilot.CASES) * len(pilot.TRAIN_ROOTS) * len(pilot.HELDOUT_SEEDS)
+        summary = {"episodes": len(rows), "H_states": len(rows) * 48,
+                   "by_case": {case: {
+                       "second_step_opportunities": sum(r["second_step_opportunities"] for r in rows if r["case"] == case),
+                       "changed_second_token": sum(r["changed_second_token"] for r in rows if r["case"] == case),
+                       "changed_final_matching": sum(r["changed_final_matching"] for r in rows if r["case"] == case),
+                       "trained_C8_D8_first_token_difference": sum(r["trained_C8_D8_first_token_difference"] for r in rows if r["case"] == case),
+                       "trained_C8_D8_final_matching_difference": sum(r["trained_C8_D8_final_matching_difference"] for r in rows if r["case"] == case),
+                       "mean_second_step_tv": float(np.mean([r["mean_second_step_tv"] for r in rows
+                                                              if r["case"] == case and r["mean_second_step_tv"] is not None])),
+                   } for case in pilot.CASES}}
+        pilot.write_json(output / "summary.json", summary)
+        manifest["status"] = "COMPLETED"
+    except Exception as error:
+        manifest.update(status="FAILED", error=repr(error))
+        raise
+    finally:
+        manifest["elapsed_seconds"] = time.monotonic() - started
+        manifest["finished_utc"] = datetime.now(timezone.utc).isoformat()
+        manifest["output_sha256"] = {str(p.relative_to(output)): pilot.sha256(p)
+                                     for p in output.rglob("*") if p.is_file() and p.name != "manifest.json"}
+        pilot.write_json(output / "manifest.json", manifest)
+    print(output.resolve())
+    print(json.dumps(summary, indent=2, sort_keys=True))
+
+
+if __name__ == "__main__":
+    main()
