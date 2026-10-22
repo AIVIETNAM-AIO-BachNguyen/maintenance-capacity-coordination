@@ -9,4 +9,4 @@ Date: 2026-10-22, Asia/Taipei. V1–v3 are completed with their original gates a
 
 ## One next experiment
 
-Implement and verify the prelocked v4 teacher-amortization pilot. F2 supplies same-contract matching labels on new training seeds; structured S4, flat G4 and numerical-commitment ablation R4 receive identical data and budgets. Run focused tests and bounded Ubuntu smoke before generating scientific labels. The v4 held-out gate controls independent training replication; no new TEST is currently eligible.
+The prelocked v4 teacher-amortization runner and auditor are implemented. F2 supplies same-contract matching labels; S4, G4 and R4 receive identical data and budgets. The full 123-test suite and final bounded Ubuntu smoke/audit passed (`artifacts/forecast_distillation_v4_smoke_20261022T081720658860Z`). Next, commit/push this verified code, run only the locked training panel, and audit it before held-out. No new TEST is currently eligible.
