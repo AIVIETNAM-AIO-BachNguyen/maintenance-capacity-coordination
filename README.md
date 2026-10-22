@@ -67,4 +67,4 @@ The [primary-literature positioning and research decision](docs/research_positio
 
 ## Forecast-informed coordination pilot v4
 
-The [v4 proposal](docs/forecast_demand_commitment_proposal_v4.md) and [prelocked protocol](docs/forecast_demand_commitment_pilot_v4.md) test whether the existing structured actor can amortize F2's matching decisions with lower deployment compute. Flat full-information and numerical-commitment ablations receive the same teacher data. No v4 outcome or TEST has been opened.
+The [v4 proposal](docs/forecast_demand_commitment_proposal_v4.md) and [prelocked protocol](docs/forecast_demand_commitment_pilot_v4.md) tested whether the existing structured actor could amortize F2's matching decisions with lower deployment compute. Flat full-information and numerical-commitment ablations received the same teacher data. [Audited findings](docs/forecast_demand_commitment_pilot_v4_findings.md) show a deployment-speed gain but failed structural, capacity-context and cost-fidelity gates; no independent training replication or v4 TEST opened.
