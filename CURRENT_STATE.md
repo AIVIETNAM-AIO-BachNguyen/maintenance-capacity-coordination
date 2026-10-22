@@ -10,4 +10,4 @@ Date: 2026-10-22, Asia/Taipei. V1–v3 are completed with their original gates a
 
 ## One next experiment
 
-Implement and audit the v5 bounded joint-service interaction check on fresh seeds. Only a passed independent-bank headroom gate permits a separately prelocked learner pilot. Do not tune v4 on held-out results or open TEST.
+Run and replay-audit the prelocked v5 bounded joint-service interaction check on 16 fresh physical seeds per case. Its 129-test and two-episode Ubuntu engineering gates passed. Only a passed independent-bank headroom gate permits a separately prelocked learner pilot. Do not tune v4 on held-out results or open TEST.
