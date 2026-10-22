@@ -2,6 +2,9 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
+import re
+import subprocess
 from collections import Counter
 import json
 from pathlib import Path
@@ -33,7 +36,17 @@ def near(left, right, atol=1e-7):
 def assert_artifact_header(run, manifest):
     assert manifest['status'] == 'COMPLETED'
     assert manifest['protocol_sha256'] == v7.sha256(v7.PROTOCOL)
-    assert manifest['source_sha256'] == v7.source_hashes()
+    # An auditor-only correctness fix may follow collection. The evaluated runner,
+    # policies and simulator must still match the collection commit byte for byte.
+    for rel, expected in manifest['source_sha256'].items():
+        if rel == 'experiments/audit_capacity_transfer_v7.py':
+            commit = manifest['git_commit']
+            assert re.fullmatch(r'[0-9a-f]{40}', commit)
+            blob = subprocess.run(('git', 'show', f'{commit}:{rel}'), cwd=v7.ROOT,
+                                  capture_output=True, check=True).stdout
+            assert hashlib.sha256(blob).hexdigest() == expected
+        else:
+            assert v7.sha256(v7.ROOT / rel) == expected, rel
     assert manifest['config_sha256'] == v7.config_hashes()
     assert manifest['git_status'] == '' or manifest['kind'] == 'smoke'
     assert manifest['sealed_test_reserved'] == list(v7.SEALED_TEST)
@@ -211,14 +224,23 @@ def audit_evaluation(run):
                       sr['overall'] <= -10, all(x <= 0 for x in sr['by_pair'].values()),
                       sum(x < 0 for x in sr['by_training_root'].values()) >= 2,
                       sr['physical_cluster_ci95'][1] < 0)
-        assert list(saved['gate_conditions'].values()) == list(conditions)
+        expected_conditions = dict(zip((
+            'target_S_minus_G3_overall_le_-30', 'target_S_minus_G3_both_pairs_negative',
+            'target_S_minus_G3_two_roots_negative', 'target_S_minus_G3_ci_upper_lt_0',
+            'transfer_overall_le_-10', 'transfer_both_pairs_le_0',
+            'transfer_ci_upper_lt_0', 'target_S_minus_R_overall_le_-10',
+            'target_S_minus_R_both_pairs_le_0', 'target_S_minus_R_two_roots_negative',
+            'target_S_minus_R_ci_upper_lt_0'), conditions))
+        assert saved['gate_conditions'] == expected_conditions
         assert saved['go'] is all(conditions)
         decision = load(run / 'replication_go_decision.json')
         assert decision['go'] is all(conditions)
         assert decision['gate_conditions'] == saved['gate_conditions']
     audit = {'status': 'PASS', 'kind': manifest['kind'], 'replayed_episodes': len(all_rows),
              'complete_panel_and_checkpoint_identity': 'PASS', 'source_protocol_config_seed_roles': 'PASS',
-             'legality_cost_accounting_and_gate_arithmetic': 'PASS'}
+             'legality_cost_accounting_and_gate_arithmetic': 'PASS',
+             'auditor_sha256': v7.sha256(v7.ROOT / 'experiments/audit_capacity_transfer_v7.py'),
+             'auditor_correction': 'Compare gate conditions by key; collection source verified at collection commit'}
     v7.write_json(run / 'audit.json', audit)
     return audit
 
