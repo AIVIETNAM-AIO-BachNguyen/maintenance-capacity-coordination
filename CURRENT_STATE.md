@@ -10,4 +10,4 @@ Date: 2026-10-22, Asia/Taipei. V1–v3 are completed with their original gates a
 
 ## One next experiment
 
-Prelock a same-information, same-matching learner pilot that tests whether an explicit joint service-start term realizes the v5 representation opportunity against an edge-additive ablation and full-information flat control. Include F2/V14/risk same-panel references; keep V1 TEST and v2–v4 gates closed. No new TEST is authorized.
+Implement and engineering-audit the prelocked v6 same-information, same-matching learner pilot. Its explicit joint term is compared with a near-parameter-matched edge-additive ablation and flat control; F2/V14/risk/G/D are same-panel references. Run the fresh pilot only after source verification. No new TEST is authorized.
