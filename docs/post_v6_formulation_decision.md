@@ -19,6 +19,12 @@ Current full-information matching policies already observe present machine healt
 
 There is no currently evidenced same-contract mechanism with a predeclared practical advantage over the strong full-information or rollout controls. A new scorer, loss, label source, horizon, seed panel or larger N/K launched from these outcomes would be outcome-guided search. Repeating v6 with more favorable seeds would not be independent confirmation.
 
+## Boundary with published maintenance schedulers
+
+The [AirME/HetGPO primary paper](https://phejohnwang.github.io/files/Wang_ICAPS2022_Preprint.pdf) defines a crew–aircraft maintenance decision that starts at the current time step and keeps the crew unavailable until that repair completes. Its virtual fleet has heterogeneous aircraft but a homogeneous crew team. That is precedent for dynamic service-start allocation and learned resource representations, not evidence that this project's parallel machines have a binding advance reservation. The [Ruiz Rodríguez et al. paper](https://orbilu.uni.lu/handle/10993/54345) likewise studies dynamic technician assignment with skill-dependent maintenance times; a new contribution cannot be claimed merely from heterogeneous technicians or multi-agent maintenance scheduling.
+
+A distinct [aircraft-maintenance scheduling study](https://www.sciencedirect.com/science/article/pii/S1366554525000535) chooses maintenance opportunities, planned starts and technician work sequences before uncertain task durations are realized, then adjusts starts afterward. This supports the *possibility* of a pre-start planning layer in aircraft operations. Its aircraft flights, bases, outsourcing and overtime costs do not establish the same layer or costs in this parallel-machine simulator. Importing those consequences without a target-system contract would manufacture a new problem instead of testing the present coordination hypothesis.
+
 ## Decision and condition for a new campaign
 
 Stop scientific runs at v6. Preserve every raw artifact and negative finding; run no v6 independent training replication or new TEST. The evaluated framework is correctly described as a two-stage v1 policy and later structured centralized matching policies, with limited or negative benefit claims. The desired validated capacity-coordination advantage remains unproven.
