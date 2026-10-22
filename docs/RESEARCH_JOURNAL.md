@@ -61,3 +61,9 @@ Decision: no further scientific run follows automatically from v2's limited earl
 ## 2026-10-22 — service-horizon mechanism screen
 
 A source/config screen tested whether F2's six-tick lookahead truncates the technician commitments that dominate v3's cost gap. Reciprocal service times are only 2 or 6 ticks, yet its held-out S−F2 gap is +88.66; specialist/generalist has one 8-tick edge with a 2-tick alternative and a much smaller S−F2 gap of +7.65. This does not measure longer-horizon forecasts, but it rules out unfinished service beyond tick six as an explanation of the largest observed gap. Decision: do not open a horizon-length campaign on this rationale alone; retain the need for a distinct operational mechanism and fresh prelock before any new run.
+
+## 2026-10-22 — forecast-informed coordination v4 prelock
+
+A distinct, same-contract question follows from the audited v3 cost/runtime tradeoff: F2's 16-scenario six-tick rollout was lower cost than S on the same panel but required much more action-selection compute, and its implementation exposes a forecast score for every legal matching. The opened v2 state panel also showed multiple legal roots and 10–12 distinct F2 choices by case. This supports testing whether a shared machine/worker policy can amortize a strong decision rule, rather than adding a requester gate or changing physics.
+
+`forecast_demand_commitment_proposal_v4.md` specifies the forecast-distilled structured centralized mechanism. `forecast_demand_commitment_pilot_v4.md` locks new training/DEV/held-out/replication/TEST seed roles, identical F2 labels and masked cross-entropy budgets for S4/R4/G4, same-panel F2/A/F1 controls, H+tail estimands, physical-seed clustering, compute accounting and practical gates before any v4 teacher label or outcome. V1–v3 gates and sealed TEST remain unchanged. Next: implement and test only this pilot, run bounded Ubuntu smoke, then collect qualified v4 data.
