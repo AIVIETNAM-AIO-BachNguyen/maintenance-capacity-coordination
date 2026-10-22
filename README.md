@@ -2,7 +2,7 @@
 
 A learning-based framework for coordinating maintenance demand and heterogeneous technician capacity.
 
-This repository contains a tested two-stage demand/capacity framework and one prelocked pilot. The pilot has mixed results; it does not establish a general learning benefit or a new RL algorithm. Read [RESEARCH_BRIEF.md](RESEARCH_BRIEF.md), [CURRENT_STATE.md](CURRENT_STATE.md), then [AGENTS.md](AGENTS.md).
+This repository contains tested maintenance-demand/capacity coordination pilots. Their results are mixed; they do not yet establish a general learning benefit or a new RL algorithm. Read [RESEARCH_BRIEF.md](RESEARCH_BRIEF.md), [CURRENT_STATE.md](CURRENT_STATE.md), then [AGENTS.md](AGENTS.md).
 
 ## Quick start
 
@@ -68,3 +68,7 @@ The [primary-literature positioning and research decision](docs/research_positio
 ## Forecast-informed coordination pilot v4
 
 The [v4 proposal](docs/forecast_demand_commitment_proposal_v4.md) and [prelocked protocol](docs/forecast_demand_commitment_pilot_v4.md) tested whether the existing structured actor could amortize F2's matching decisions with lower deployment compute. Flat full-information and numerical-commitment ablations received the same teacher data. [Audited findings](docs/forecast_demand_commitment_pilot_v4_findings.md) show a deployment-speed gain but failed structural, capacity-context and cost-fidelity gates; no independent training replication or v4 TEST opened.
+
+## Joint service-start interaction and v6 pilot
+
+The [audited v5 diagnostic](docs/pair_commitment_interaction_check_v5_findings.md) found a bounded six-tick forecast interaction when two technicians start service together in the reciprocal case. It is not an H+tail policy result. The [v6 proposal](docs/joint_demand_capacity_proposal_v6.md) and [locked protocol](docs/joint_demand_capacity_pilot_v6.md) test whether a learned complete-matching scorer with an explicit two-edge term improves realized cost over additive and flat same-data controls. F2, frozen V14, risk matching and existing G/D checkpoints are same-panel references. V6 TEST is reserved but not authorized.
