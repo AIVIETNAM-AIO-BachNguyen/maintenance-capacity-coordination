@@ -58,3 +58,7 @@ uv run python -m experiments.audit_commitment_headroom_v2 --run artifacts/commit
 ```
 
 The v1 `replicate` command above evaluated fixed trained checkpoints on fresh physical seeds; independent training replication would require new training seeds and fresh models. No new TEST is authorized.
+
+## Structured matching pilot v3
+
+A [separate prelocked pilot](docs/structured_demand_commitment_pilot_v3.md) tests whether a [shared machine-demand/worker-commitment actor](docs/structured_demand_commitment_proposal_v3.md) improves PPO learning against a flat full-information actor on the same threshold-admitted matching set. It includes a remaining-time ablation and contextual always-request/strong rule controls. The v2 early-PM no-go result is unchanged. A bounded Ubuntu smoke and its audit passed; DEV and held-out outcomes are pending. New TEST seeds stay sealed.
