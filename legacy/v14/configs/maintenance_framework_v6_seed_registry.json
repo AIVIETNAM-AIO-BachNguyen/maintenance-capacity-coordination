@@ -1,0 +1,10 @@
+{
+  "version": "maintenance_framework_v1",
+  "campaign_version": "maintenance_framework_v6_edge_sharing",
+  "training": {"start": 67000000, "count": 5},
+  "development": {"start": 67100000, "count": 16},
+  "sealed_test": {"start": 67200000, "count": 64},
+  "forecast_seed": 67300000,
+  "bootstrap_seed": 67400000,
+  "smoke": {"start": 67500000, "count": 2}
+}

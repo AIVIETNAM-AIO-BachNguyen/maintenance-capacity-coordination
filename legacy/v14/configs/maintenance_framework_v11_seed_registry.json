@@ -1,0 +1,8 @@
+{
+  "campaign_version": "maintenance_framework_v11_reference_continuation_dev_v1",
+  "training": {"start": 70500000, "count": 5},
+  "development": {"start": 70510000, "count": 16},
+  "forecast_seed": 70520000,
+  "bootstrap_seed": 70540000,
+  "smoke": {"start": 70590000, "count": 2}
+}

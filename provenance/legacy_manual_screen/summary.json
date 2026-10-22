@@ -1,0 +1,11 @@
+{
+  "economic_equal": true,
+  "elapsed_seconds": 0.19358818407636136,
+  "legal_superset": true,
+  "pairs": 8,
+  "physical_equal": true,
+  "request_metadata_different_ticks": 512,
+  "scope": "manual forced-action engineering check; not episode-distribution superiority evidence",
+  "sum_queued_pm_extra_ticks": 1086,
+  "ticks": 512
+}

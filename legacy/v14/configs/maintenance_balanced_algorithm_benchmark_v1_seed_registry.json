@@ -1,0 +1,31 @@
+{
+  "protocol": "maintenance_balanced_algorithm_benchmark_v1",
+  "panels": {
+    "full": {
+      "train_seeds": [
+        46000000,
+        46000001,
+        46000002,
+        46000003,
+        46000004
+      ],
+      "development_start": 46100000,
+      "development_count": 64,
+      "test_start": 46200000,
+      "test_count": 256,
+      "analysis_seed": 46300000,
+      "forecast_seed": 46400000
+    },
+    "smoke": {
+      "train_seeds": [
+        46500000
+      ],
+      "development_start": 46600000,
+      "development_count": 2,
+      "test_start": 46700000,
+      "test_count": 4,
+      "analysis_seed": 46800000,
+      "forecast_seed": 46900000
+    }
+  }
+}

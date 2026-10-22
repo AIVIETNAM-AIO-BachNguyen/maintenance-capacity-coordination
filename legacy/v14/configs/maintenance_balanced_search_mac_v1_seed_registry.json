@@ -1,0 +1,31 @@
+{
+  "protocol": "maintenance_balanced_search_mac_v1",
+  "series": "balanced_2x2_fresh_search_20261012",
+  "round": 1,
+  "family_alpha": 0.025,
+  "confidence": 0.9986111111111111,
+  "bootstrap_samples": 80000,
+  "alpha_spending": "round r: family alpha=.05/2**r; no recycling; new series only",
+  "panels": {
+    "full": {
+      "development_start": 44000000,
+      "development_count": 24,
+      "screening_start": 44100000,
+      "screening_count": 32,
+      "confirmation_start": 44200000,
+      "confirmation_count": 256,
+      "analysis_seed": 44300000,
+      "forecast_seed": 44400000
+    },
+    "smoke": {
+      "development_start": 44500000,
+      "development_count": 2,
+      "screening_start": 44600000,
+      "screening_count": 2,
+      "confirmation_start": 44700000,
+      "confirmation_count": 2,
+      "analysis_seed": 44800000,
+      "forecast_seed": 44900000
+    }
+  }
+}

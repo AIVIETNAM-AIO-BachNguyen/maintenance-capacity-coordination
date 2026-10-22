@@ -1,0 +1,841 @@
+{
+  "ablation": {
+    "hierarchical_ci95": [
+      -7.08125,
+      2.8
+    ],
+    "losses": 33,
+    "mean": -1.721875,
+    "physical_count": 16,
+    "ties": 8,
+    "train_seed_means": {
+      "72600000": 2.234375,
+      "72600001": -6.234375,
+      "72600002": 0.171875,
+      "72600003": -0.796875,
+      "72600004": -3.984375
+    },
+    "training_count": 5,
+    "wins": 39
+  },
+  "by_case": {
+    "interchangeable_scale1": {
+      "competition": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.6000651041666666,
+          "H_failures": 2.875,
+          "H_pending": 0.025,
+          "end_pending": 0.25,
+          "episode_wall_seconds": 0.03161444689030759,
+          "failure_cost": 58.5,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 55.5875,
+          "objective": 730.8125,
+          "queued_cm_ticks": 0.1,
+          "queued_pm_ticks": 8.575,
+          "selection_seconds": 0.022278434406325688,
+          "service_starts": 51.75,
+          "tail_cost": 185.15,
+          "unavailability_cost": 616.725
+        },
+        "training_seed_cost": {
+          "72600000": 730.5625,
+          "72600001": 728.5625,
+          "72600002": 729.5625,
+          "72600003": 731.1875,
+          "72600004": 734.1875
+        }
+      },
+      "count_calibrated": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.6000651041666666,
+          "H_failures": 2.9,
+          "H_pending": 0.025,
+          "end_pending": 0.25,
+          "episode_wall_seconds": 0.03299849041068228,
+          "failure_cost": 58.875,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 55.6125,
+          "objective": 731.2125,
+          "queued_cm_ticks": 0.1,
+          "queued_pm_ticks": 8.575,
+          "selection_seconds": 0.023641181919083466,
+          "service_starts": 51.75,
+          "tail_cost": 185.15,
+          "unavailability_cost": 616.725
+        },
+        "training_seed_cost": {
+          "72600000": 730.5625,
+          "72600001": 728.5625,
+          "72600002": 728.5625,
+          "72600003": 735.1875,
+          "72600004": 733.1875
+        }
+      },
+      "fcfs": {
+        "count": 16,
+        "means": {
+          "H_availability": 0.6002604166666666,
+          "H_failures": 3.125,
+          "H_pending": 0.0625,
+          "end_pending": 0.25,
+          "episode_wall_seconds": 0.008973270872957073,
+          "failure_cost": 62.8125,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 55.875,
+          "objective": 735.1875,
+          "queued_cm_ticks": 0.0625,
+          "queued_pm_ticks": 9.0625,
+          "selection_seconds": 0.0007038744806777686,
+          "service_starts": 51.75,
+          "tail_cost": 185.75,
+          "unavailability_cost": 616.5
+        }
+      },
+      "flat_free": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.6018880208333333,
+          "H_failures": 6.4625,
+          "H_pending": 0.375,
+          "end_pending": 0.25,
+          "episode_wall_seconds": 0.029804111730481964,
+          "failure_cost": 112.875,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 59.225,
+          "objective": 788.6,
+          "queued_cm_ticks": 0.125,
+          "queued_pm_ticks": 17.4,
+          "selection_seconds": 0.019895249542605596,
+          "service_starts": 51.75,
+          "tail_cost": 188.05,
+          "unavailability_cost": 616.5
+        },
+        "training_seed_cost": {
+          "68000000": 791.1875,
+          "68000001": 791.1875,
+          "68000002": 784.1875,
+          "68000003": 793.1875,
+          "68000004": 783.25
+        }
+      },
+      "risk_matching": {
+        "count": 16,
+        "means": {
+          "H_availability": 0.6002604166666666,
+          "H_failures": 3.125,
+          "H_pending": 0.0625,
+          "end_pending": 0.25,
+          "episode_wall_seconds": 0.009692216415714938,
+          "failure_cost": 62.8125,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 55.875,
+          "objective": 735.1875,
+          "queued_cm_ticks": 0.0625,
+          "queued_pm_ticks": 9.0625,
+          "selection_seconds": 0.0013850520699634217,
+          "service_starts": 51.75,
+          "tail_cost": 185.75,
+          "unavailability_cost": 616.5
+        }
+      },
+      "rollout": {
+        "count": 16,
+        "means": {
+          "H_availability": 0.5989583333333333,
+          "H_failures": 0.875,
+          "H_pending": 0.0,
+          "end_pending": 0.0,
+          "episode_wall_seconds": 0.7465524971266859,
+          "failure_cost": 13.125,
+          "forecast_transitions": 11406.0,
+          "maintenance_cost": 52.625,
+          "objective": 683.75,
+          "queued_cm_ticks": 0.3125,
+          "queued_pm_ticks": 2.0625,
+          "selection_seconds": 0.738344697318098,
+          "service_starts": 51.75,
+          "tail_cost": 168.8125,
+          "unavailability_cost": 618.0
+        }
+      },
+      "shared_canonical": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.6002604166666666,
+          "H_failures": 3.0,
+          "H_pending": 0.025,
+          "end_pending": 0.25,
+          "episode_wall_seconds": 0.03747542281198548,
+          "failure_cost": 60.1875,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 55.7,
+          "objective": 732.3875,
+          "queued_cm_ticks": 0.0625,
+          "queued_pm_ticks": 8.6375,
+          "selection_seconds": 0.027993391134077682,
+          "service_starts": 51.75,
+          "tail_cost": 184.95,
+          "unavailability_cost": 616.5
+        },
+        "training_seed_cost": {
+          "68000000": 730.1875,
+          "68000001": 731.1875,
+          "68000002": 734.8125,
+          "68000003": 735.1875,
+          "68000004": 730.5625
+        }
+      },
+      "shared_free": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.6001953125,
+          "H_failures": 2.95,
+          "H_pending": 0.0125,
+          "end_pending": 0.25,
+          "episode_wall_seconds": 0.03608393019530922,
+          "failure_cost": 59.4375,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 55.65,
+          "objective": 731.6625,
+          "queued_cm_ticks": 0.075,
+          "queued_pm_ticks": 8.4875,
+          "selection_seconds": 0.026603361887100618,
+          "service_starts": 51.75,
+          "tail_cost": 184.95,
+          "unavailability_cost": 616.575
+        },
+        "training_seed_cost": {
+          "68000000": 730.1875,
+          "68000001": 731.1875,
+          "68000002": 735.1875,
+          "68000003": 731.1875,
+          "68000004": 730.5625
+        }
+      }
+    },
+    "reciprocal_scale2": {
+      "competition": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.5955078125,
+          "H_failures": 3.2625,
+          "H_pending": 0.125,
+          "end_pending": 0.3125,
+          "episode_wall_seconds": 0.03163071048620623,
+          "failure_cost": 68.4375,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 55.55,
+          "objective": 747.8375,
+          "queued_cm_ticks": 1.3875,
+          "queued_pm_ticks": 11.15,
+          "selection_seconds": 0.02227202930371277,
+          "service_starts": 50.9875,
+          "tail_cost": 191.2375,
+          "unavailability_cost": 623.85
+        },
+        "training_seed_cost": {
+          "72600000": 748.625,
+          "72600001": 744.6875,
+          "72600002": 748.625,
+          "72600003": 748.625,
+          "72600004": 748.625
+        }
+      },
+      "count_calibrated": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.5939453125,
+          "H_failures": 3.35,
+          "H_pending": 0.125,
+          "end_pending": 0.3125,
+          "episode_wall_seconds": 0.0329989997058874,
+          "failure_cost": 69.9375,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 55.5125,
+          "objective": 750.05,
+          "queued_cm_ticks": 1.35,
+          "queued_pm_ticks": 11.45,
+          "selection_seconds": 0.02365099216112867,
+          "service_starts": 50.875,
+          "tail_cost": 190.45,
+          "unavailability_cost": 624.6
+        },
+        "training_seed_cost": {
+          "72600000": 745.625,
+          "72600001": 749.625,
+          "72600002": 750.5625,
+          "72600003": 744.625,
+          "72600004": 759.8125
+        }
+      },
+      "fcfs": {
+        "count": 16,
+        "means": {
+          "H_availability": 0.5475260416666666,
+          "H_failures": 5.9375,
+          "H_pending": 0.125,
+          "end_pending": 0.5625,
+          "episode_wall_seconds": 0.009150272991973907,
+          "failure_cost": 120.0,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 53.5625,
+          "objective": 866.9375,
+          "queued_cm_ticks": 7.0,
+          "queued_pm_ticks": 16.375,
+          "selection_seconds": 0.0007008106258581392,
+          "service_starts": 45.8125,
+          "tail_cost": 216.5,
+          "unavailability_cost": 693.375
+        }
+      },
+      "flat_free": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.5864583333333333,
+          "H_failures": 7.0625,
+          "H_pending": 0.375,
+          "end_pending": 0.3,
+          "episode_wall_seconds": 0.02985684351733653,
+          "failure_cost": 122.8125,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 58.3625,
+          "objective": 814.25,
+          "queued_cm_ticks": 1.9875,
+          "queued_pm_ticks": 18.775,
+          "selection_seconds": 0.019938844366697593,
+          "service_starts": 50.275,
+          "tail_cost": 187.75,
+          "unavailability_cost": 633.075
+        },
+        "training_seed_cost": {
+          "68000000": 816.375,
+          "68000001": 818.625,
+          "68000002": 809.4375,
+          "68000003": 816.375,
+          "68000004": 810.4375
+        }
+      },
+      "risk_matching": {
+        "count": 16,
+        "means": {
+          "H_availability": 0.5830078125,
+          "H_failures": 3.9375,
+          "H_pending": 0.0625,
+          "end_pending": 0.375,
+          "episode_wall_seconds": 0.009697366192995105,
+          "failure_cost": 80.625,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 54.8125,
+          "objective": 775.5625,
+          "queued_cm_ticks": 2.3125,
+          "queued_pm_ticks": 13.125,
+          "selection_seconds": 0.0013683841752936132,
+          "service_starts": 49.5625,
+          "tail_cost": 195.0625,
+          "unavailability_cost": 640.125
+        }
+      },
+      "rollout": {
+        "count": 16,
+        "means": {
+          "H_availability": 0.5950520833333334,
+          "H_failures": 1.375,
+          "H_pending": 0.0,
+          "end_pending": 0.0625,
+          "episode_wall_seconds": 0.6908283948650933,
+          "failure_cost": 23.4375,
+          "forecast_transitions": 11172.0,
+          "maintenance_cost": 53.0625,
+          "objective": 699.0,
+          "queued_cm_ticks": 1.125,
+          "queued_pm_ticks": 3.5625,
+          "selection_seconds": 0.682587671901274,
+          "service_starts": 51.5,
+          "tail_cost": 171.875,
+          "unavailability_cost": 622.5
+        }
+      },
+      "shared_canonical": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.5129557291666667,
+          "H_failures": 6.7,
+          "H_pending": 0.5375,
+          "end_pending": 0.425,
+          "episode_wall_seconds": 0.03715553604852175,
+          "failure_cost": 130.6875,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 50.6875,
+          "objective": 924.25,
+          "queued_cm_ticks": 12.5,
+          "queued_pm_ticks": 19.525,
+          "selection_seconds": 0.027684224891709165,
+          "service_starts": 42.1875,
+          "tail_cost": 225.225,
+          "unavailability_cost": 742.875
+        },
+        "training_seed_cost": {
+          "68000000": 772.5,
+          "68000001": 775.5625,
+          "68000002": 1053.6875,
+          "68000003": 1035.5,
+          "68000004": 984.0
+        }
+      },
+      "shared_free": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.4474609375,
+          "H_failures": 9.6125,
+          "H_pending": 1.175,
+          "end_pending": 0.475,
+          "episode_wall_seconds": 0.03589755690190941,
+          "failure_cost": 174.9375,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 47.85,
+          "objective": 1046.5875,
+          "queued_cm_ticks": 20.8625,
+          "queued_pm_ticks": 25.8,
+          "selection_seconds": 0.02646232137194602,
+          "service_starts": 36.4875,
+          "tail_cost": 232.0625,
+          "unavailability_cost": 823.8
+        },
+        "training_seed_cost": {
+          "68000000": 773.625,
+          "68000001": 775.5625,
+          "68000002": 1242.9375,
+          "68000003": 1242.5,
+          "68000004": 1198.3125
+        }
+      }
+    },
+    "reciprocal_scale3": {
+      "competition": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.5024088541666667,
+          "H_failures": 5.8875,
+          "H_pending": 0.0625,
+          "end_pending": 0.4375,
+          "episode_wall_seconds": 0.031659519620006904,
+          "failure_cost": 116.8125,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 50.975,
+          "objective": 933.0125,
+          "queued_cm_ticks": 0.6625,
+          "queued_pm_ticks": 17.5875,
+          "selection_seconds": 0.022290804685326293,
+          "service_starts": 43.25,
+          "tail_cost": 233.65,
+          "unavailability_cost": 765.225
+        },
+        "training_seed_cost": {
+          "72600000": 935.5625,
+          "72600001": 929.1875,
+          "72600002": 931.8125,
+          "72600003": 936.5625,
+          "72600004": 931.9375
+        }
+      },
+      "count_calibrated": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.5021484375,
+          "H_failures": 6.0625,
+          "H_pending": 0.1125,
+          "end_pending": 0.4125,
+          "episode_wall_seconds": 0.03302184144122293,
+          "failure_cost": 121.125,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 51.2625,
+          "objective": 937.9125,
+          "queued_cm_ticks": 0.7875,
+          "queued_pm_ticks": 17.7,
+          "selection_seconds": 0.02361555699753808,
+          "service_starts": 43.25,
+          "tail_cost": 235.5375,
+          "unavailability_cost": 765.525
+        },
+        "training_seed_cost": {
+          "72600000": 935.5625,
+          "72600001": 942.9375,
+          "72600002": 936.5625,
+          "72600003": 937.9375,
+          "72600004": 936.5625
+        }
+      },
+      "fcfs": {
+        "count": 16,
+        "means": {
+          "H_availability": 0.39680989583333326,
+          "H_failures": 7.4375,
+          "H_pending": 0.75,
+          "end_pending": 0.5,
+          "episode_wall_seconds": 0.00872070169862127,
+          "failure_cost": 151.875,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 42.3125,
+          "objective": 1115.5625,
+          "queued_cm_ticks": 26.4375,
+          "queued_pm_ticks": 23.4375,
+          "selection_seconds": 0.0006526687138830312,
+          "service_starts": 32.25,
+          "tail_cost": 279.375,
+          "unavailability_cost": 921.375
+        }
+      },
+      "flat_free": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.4909505208333333,
+          "H_failures": 7.675,
+          "H_pending": 0.0625,
+          "end_pending": 0.8125,
+          "episode_wall_seconds": 0.029699969453213272,
+          "failure_cost": 154.5,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 51.7,
+          "objective": 988.9,
+          "queued_cm_ticks": 3.8875,
+          "queued_pm_ticks": 23.8,
+          "selection_seconds": 0.020016704527370165,
+          "service_starts": 41.625,
+          "tail_cost": 248.7375,
+          "unavailability_cost": 782.7
+        },
+        "training_seed_cost": {
+          "68000000": 983.0625,
+          "68000001": 986.1875,
+          "68000002": 993.5625,
+          "68000003": 983.0625,
+          "68000004": 998.625
+        }
+      },
+      "risk_matching": {
+        "count": 16,
+        "means": {
+          "H_availability": 0.4560546875,
+          "H_failures": 6.625,
+          "H_pending": 0.1875,
+          "end_pending": 0.4375,
+          "episode_wall_seconds": 0.009431789389054757,
+          "failure_cost": 134.0625,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 47.625,
+          "objective": 1010.8125,
+          "queued_cm_ticks": 11.0625,
+          "queued_pm_ticks": 19.375,
+          "selection_seconds": 0.001310770727286581,
+          "service_starts": 38.75,
+          "tail_cost": 250.125,
+          "unavailability_cost": 829.125
+        }
+      },
+      "rollout": {
+        "count": 16,
+        "means": {
+          "H_availability": 0.4749348958333333,
+          "H_failures": 8.0,
+          "H_pending": 0.8125,
+          "end_pending": 0.375,
+          "episode_wall_seconds": 0.667568020253384,
+          "failure_cost": 169.6875,
+          "forecast_transitions": 11376.0,
+          "maintenance_cost": 50.625,
+          "objective": 1023.5625,
+          "queued_cm_ticks": 15.5,
+          "queued_pm_ticks": 24.3125,
+          "selection_seconds": 0.6593212861989741,
+          "service_starts": 39.375,
+          "tail_cost": 262.6875,
+          "unavailability_cost": 803.25
+        }
+      },
+      "shared_canonical": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.3865234375,
+          "H_failures": 7.4,
+          "H_pending": 0.7375,
+          "end_pending": 0.625,
+          "episode_wall_seconds": 0.03704494458506815,
+          "failure_cost": 155.25,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 41.8125,
+          "objective": 1127.1375,
+          "queued_cm_ticks": 27.8875,
+          "queued_pm_ticks": 22.325,
+          "selection_seconds": 0.027719942585099487,
+          "service_starts": 31.7875,
+          "tail_cost": 279.9875,
+          "unavailability_cost": 930.075
+        },
+        "training_seed_cost": {
+          "68000000": 1016.9375,
+          "68000001": 1016.3125,
+          "68000002": 1215.375,
+          "68000003": 1218.25,
+          "68000004": 1168.8125
+        }
+      },
+      "shared_free": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.3423177083333333,
+          "H_failures": 8.575,
+          "H_pending": 0.9875,
+          "end_pending": 0.6375,
+          "episode_wall_seconds": 0.03560788251779741,
+          "failure_cost": 180.5625,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 38.5625,
+          "objective": 1212.35,
+          "queued_cm_ticks": 38.4125,
+          "queued_pm_ticks": 27.0,
+          "selection_seconds": 0.02634967949707061,
+          "service_starts": 26.8875,
+          "tail_cost": 299.2125,
+          "unavailability_cost": 993.225
+        },
+        "training_seed_cost": {
+          "68000000": 1018.3125,
+          "68000001": 1012.4375,
+          "68000002": 1361.9375,
+          "68000003": 1359.625,
+          "68000004": 1309.4375
+        }
+      }
+    },
+    "specialist_generalist_scale2": {
+      "competition": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.5177734375,
+          "H_failures": 8.9875,
+          "H_pending": 0.6625,
+          "end_pending": 0.5375,
+          "episode_wall_seconds": 0.03176559296407504,
+          "failure_cost": 198.1875,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 54.45,
+          "objective": 997.1625,
+          "queued_cm_ticks": 11.625,
+          "queued_pm_ticks": 30.1,
+          "selection_seconds": 0.022336293045373167,
+          "service_starts": 41.5875,
+          "tail_cost": 266.775,
+          "unavailability_cost": 744.525
+        },
+        "training_seed_cost": {
+          "72600000": 986.75,
+          "72600001": 988.1875,
+          "72600002": 985.1875,
+          "72600003": 1015.8125,
+          "72600004": 1009.875
+        }
+      },
+      "count_calibrated": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.5127604166666666,
+          "H_failures": 9.0,
+          "H_pending": 0.7,
+          "end_pending": 0.6125,
+          "episode_wall_seconds": 0.03315694838674972,
+          "failure_cost": 193.5,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 54.2375,
+          "objective": 996.5375,
+          "queued_cm_ticks": 12.825,
+          "queued_pm_ticks": 28.7,
+          "selection_seconds": 0.023725876820390113,
+          "service_starts": 41.6,
+          "tail_cost": 260.3,
+          "unavailability_cost": 748.8
+        },
+        "training_seed_cost": {
+          "72600000": 980.8125,
+          "72600001": 994.4375,
+          "72600002": 978.8125,
+          "72600003": 1017.625,
+          "72600004": 1011.0
+        }
+      },
+      "fcfs": {
+        "count": 16,
+        "means": {
+          "H_availability": 0.5084635416666666,
+          "H_failures": 10.8125,
+          "H_pending": 0.625,
+          "end_pending": 0.5,
+          "episode_wall_seconds": 0.009100092000153381,
+          "failure_cost": 222.1875,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 55.5625,
+          "objective": 1032.25,
+          "queued_cm_ticks": 7.0,
+          "queued_pm_ticks": 30.75,
+          "selection_seconds": 0.0006870390207041055,
+          "service_starts": 41.0625,
+          "tail_cost": 262.625,
+          "unavailability_cost": 754.5
+        }
+      },
+      "flat_free": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.4912760416666666,
+          "H_failures": 9.375,
+          "H_pending": 0.6875,
+          "end_pending": 0.5625,
+          "episode_wall_seconds": 0.029702106991317125,
+          "failure_cost": 195.375,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 52.6125,
+          "objective": 1021.9125,
+          "queued_cm_ticks": 12.2,
+          "queued_pm_ticks": 28.2375,
+          "selection_seconds": 0.01986029559338931,
+          "service_starts": 39.8875,
+          "tail_cost": 256.85,
+          "unavailability_cost": 773.925
+        },
+        "training_seed_cost": {
+          "68000000": 1021.0625,
+          "68000001": 1023.375,
+          "68000002": 1014.0625,
+          "68000003": 1020.0,
+          "68000004": 1031.0625
+        }
+      },
+      "risk_matching": {
+        "count": 16,
+        "means": {
+          "H_availability": 0.5104166666666666,
+          "H_failures": 10.625,
+          "H_pending": 0.625,
+          "end_pending": 0.4375,
+          "episode_wall_seconds": 0.009729764758958481,
+          "failure_cost": 218.4375,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 55.8125,
+          "objective": 1027.625,
+          "queued_cm_ticks": 7.0,
+          "queued_pm_ticks": 29.0625,
+          "selection_seconds": 0.0013141100134816952,
+          "service_starts": 41.5,
+          "tail_cost": 262.625,
+          "unavailability_cost": 753.375
+        }
+      },
+      "rollout": {
+        "count": 16,
+        "means": {
+          "H_availability": 0.5029296875,
+          "H_failures": 7.75,
+          "H_pending": 0.625,
+          "end_pending": 0.625,
+          "episode_wall_seconds": 0.5300088086223695,
+          "failure_cost": 170.625,
+          "forecast_transitions": 8424.0,
+          "maintenance_cost": 52.25,
+          "objective": 984.5,
+          "queued_cm_ticks": 11.125,
+          "queued_pm_ticks": 25.375,
+          "selection_seconds": 0.5216892868847935,
+          "service_starts": 41.0625,
+          "tail_cost": 257.4375,
+          "unavailability_cost": 761.625
+        }
+      },
+      "shared_canonical": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.5108072916666666,
+          "H_failures": 9.6125,
+          "H_pending": 0.5375,
+          "end_pending": 0.475,
+          "episode_wall_seconds": 0.03743109312054003,
+          "failure_cost": 193.3125,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 53.6625,
+          "objective": 999.225,
+          "queued_cm_ticks": 5.8625,
+          "queued_pm_ticks": 28.7625,
+          "selection_seconds": 0.02761682008567732,
+          "service_starts": 41.05,
+          "tail_cost": 251.3,
+          "unavailability_cost": 752.25
+        },
+        "training_seed_cost": {
+          "68000000": 1003.625,
+          "68000001": 999.9375,
+          "68000002": 990.0625,
+          "68000003": 1000.125,
+          "68000004": 1002.375
+        }
+      },
+      "shared_free": {
+        "count": 80,
+        "means": {
+          "H_availability": 0.5083333333333334,
+          "H_failures": 9.95,
+          "H_pending": 0.6125,
+          "end_pending": 0.425,
+          "episode_wall_seconds": 0.03607959092769306,
+          "failure_cost": 204.1875,
+          "forecast_transitions": 0.0,
+          "maintenance_cost": 54.0375,
+          "objective": 1014.45,
+          "queued_cm_ticks": 6.7375,
+          "queued_pm_ticks": 29.325,
+          "selection_seconds": 0.02624788732791785,
+          "service_starts": 40.675,
+          "tail_cost": 258.725,
+          "unavailability_cost": 756.225
+        },
+        "training_seed_cost": {
+          "68000000": 1001.125,
+          "68000001": 1003.1875,
+          "68000002": 1028.8125,
+          "68000003": 1011.625,
+          "68000004": 1027.5
+        }
+      }
+    }
+  },
+  "dev_gate_details": {
+    "risk_dominates": false,
+    "strong_control_seeds": [
+      72600000,
+      72600002,
+      72600001
+    ],
+    "strong_wins": 1
+  },
+  "dev_go_gate": false,
+  "pooled": {
+    "competition": 852.2062500000001,
+    "count_calibrated": 853.9281249999999,
+    "fcfs": 937.484375,
+    "flat_free": 903.415625,
+    "risk_matching": 887.296875,
+    "rollout": 847.703125,
+    "shared_canonical": 945.75,
+    "shared_free": 1001.2625
+  },
+  "pooled_selection_seconds": {
+    "competition": 0.02229439036018448,
+    "count_calibrated": 0.02365840197453508,
+    "fcfs": 0.0006860982102807611,
+    "flat_free": 0.019927773507515664,
+    "risk_matching": 0.0013445792465063278,
+    "rollout": 0.6504857355757849,
+    "shared_canonical": 0.02775359467414091,
+    "shared_free": 0.026415812521008775
+  }
+}

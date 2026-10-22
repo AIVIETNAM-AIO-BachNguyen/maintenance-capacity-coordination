@@ -1,0 +1,29 @@
+{
+  "protocol": "maintenance_joint_learning_mac_v1",
+  "panels": {
+    "full": {
+      "train_seeds": [
+        41000000,
+        41000001,
+        41000002
+      ],
+      "development_start": 41100000,
+      "development_count": 32,
+      "test_start": 41200000,
+      "test_count": 128,
+      "analysis_seed": 41300000,
+      "forecast_seed": 41800000
+    },
+    "smoke": {
+      "train_seeds": [
+        41400000
+      ],
+      "development_start": 41500000,
+      "development_count": 2,
+      "test_start": 41600000,
+      "test_count": 2,
+      "analysis_seed": 41700000,
+      "forecast_seed": 41900000
+    }
+  }
+}

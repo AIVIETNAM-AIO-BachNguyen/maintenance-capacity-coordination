@@ -1,0 +1,95 @@
+{
+  "source_repository": "git@github.com:bachng23/ht-pdm-fjsp.git",
+  "source_revision": "2343d79d70d1c1fc2f857da2a5afe35c4d501527",
+  "source_branch": "codex/machine-capacity-formulation-gate",
+  "imports": [
+    {
+      "source_path": "src/ht_pdm_fjsp/maintenance_dispatch.py",
+      "destination_path": "src/ht_pdm_fjsp/maintenance_dispatch.py",
+      "source_sha256": "7c542047128e5c9816d53d20e74bd8055a77c7ef99b8a99275dd26c86e81cb8c",
+      "source_revision": "2343d79d70d1c1fc2f857da2a5afe35c4d501527",
+      "destination_sha256": "7c542047128e5c9816d53d20e74bd8055a77c7ef99b8a99275dd26c86e81cb8c",
+      "byte_preserved": true
+    },
+    {
+      "source_path": "src/ht_pdm_fjsp/maintenance_requests.py",
+      "destination_path": "src/ht_pdm_fjsp/maintenance_requests.py",
+      "source_sha256": "3288f11fdc9adbd999b9a719900280bbf38788f3e3f16c6cb3ff28694229fc65",
+      "source_revision": "2343d79d70d1c1fc2f857da2a5afe35c4d501527",
+      "destination_sha256": "3288f11fdc9adbd999b9a719900280bbf38788f3e3f16c6cb3ff28694229fc65",
+      "byte_preserved": true
+    },
+    {
+      "source_path": "src/ht_pdm_fjsp/maintenance_request_policies.py",
+      "destination_path": "src/ht_pdm_fjsp/maintenance_request_policies.py",
+      "source_sha256": "1e168a44fd8126f6a5fdf680bc492e96f5a7f718e87f96dbd60dbe103efe0d64",
+      "source_revision": "2343d79d70d1c1fc2f857da2a5afe35c4d501527",
+      "destination_sha256": "1e168a44fd8126f6a5fdf680bc492e96f5a7f718e87f96dbd60dbe103efe0d64",
+      "byte_preserved": true
+    },
+    {
+      "source_path": "src/ht_pdm_fjsp/maintenance_framework_v1.py",
+      "destination_path": "src/ht_pdm_fjsp/maintenance_framework_v1.py",
+      "source_sha256": "4a5f81bbfa1ad04ae09b2387edf83513b86c702efdd0a42ee52a0a4f27fafc00",
+      "source_revision": "2343d79d70d1c1fc2f857da2a5afe35c4d501527",
+      "destination_sha256": "4a5f81bbfa1ad04ae09b2387edf83513b86c702efdd0a42ee52a0a4f27fafc00",
+      "byte_preserved": true
+    },
+    {
+      "source_path": "src/ht_pdm_fjsp/maintenance_framework_v14_policy.py",
+      "destination_path": "src/ht_pdm_fjsp/maintenance_framework_v14_policy.py",
+      "source_sha256": "49156d59ee9605470b4cfced90215d3191f629b2e258c3ac190d73237fdffb80",
+      "source_revision": "2343d79d70d1c1fc2f857da2a5afe35c4d501527",
+      "destination_sha256": "49156d59ee9605470b4cfced90215d3191f629b2e258c3ac190d73237fdffb80",
+      "byte_preserved": true
+    },
+    {
+      "source_path": "tests/test_maintenance_dispatch.py",
+      "destination_path": "tests/test_maintenance_dispatch.py",
+      "source_sha256": "e3450b17cf0957ae410dbc208f3af1e44eb5358ebaf5d404273e45ec47118b21",
+      "source_revision": "2343d79d70d1c1fc2f857da2a5afe35c4d501527",
+      "destination_sha256": "e3450b17cf0957ae410dbc208f3af1e44eb5358ebaf5d404273e45ec47118b21",
+      "byte_preserved": true
+    },
+    {
+      "source_path": "tests/test_maintenance_requests.py",
+      "destination_path": "tests/test_maintenance_requests.py",
+      "source_sha256": "71e29f73d9fc2396e3dc3721f579aefafe65bca9e67826e4628f302994c37c3b",
+      "source_revision": "2343d79d70d1c1fc2f857da2a5afe35c4d501527",
+      "destination_sha256": "71e29f73d9fc2396e3dc3721f579aefafe65bca9e67826e4628f302994c37c3b",
+      "byte_preserved": true
+    },
+    {
+      "source_path": "tests/test_maintenance_framework_v1.py",
+      "destination_path": "tests/test_maintenance_framework_v1.py",
+      "source_sha256": "41584f46976e27c98524aa69e8453ed3975dcaed7867ceb27678688530b6d467",
+      "source_revision": "2343d79d70d1c1fc2f857da2a5afe35c4d501527",
+      "destination_sha256": "507f38e4973d63b324e4f5cde61862f86585a2dddf6c92ab66ab87113fd8d9e9",
+      "byte_preserved": false,
+      "adaptation": "Removed only the old campaign Git-preflight test and its leftover EOF blank lines; campaign and its registries intentionally excluded."
+    }
+  ],
+  "historical_evidence": [
+    {
+      "path": "provenance/legacy_manual_screen/manifest.json",
+      "sha256": "02d2a649fdda6d3fbfbf72c1cbd439732f19840695f8e4b2dc9edeeff6723aee",
+      "source_kind": "copied local lab artifact; no new replay"
+    },
+    {
+      "path": "provenance/legacy_manual_screen/paired_ticks.jsonl",
+      "sha256": "b68c69be04e40a6fd84c7bf42d8bfec6e57673c3db5a11faa544bb9708e74a01",
+      "source_kind": "copied local lab artifact; no new replay"
+    },
+    {
+      "path": "provenance/legacy_manual_screen/protocol_snapshot.md",
+      "sha256": "41c39a99f270558d1fe55543f59f7752c6c759a26ce12afcc67c662fcb494534",
+      "source_kind": "copied local lab artifact; no new replay"
+    },
+    {
+      "path": "provenance/legacy_manual_screen/summary.json",
+      "sha256": "cebe3ec30dddbc5b675bbe46a5ef08722d60685f074eee7ee3b2b032f5401cfd",
+      "source_kind": "copied local lab artifact; no new replay"
+    }
+  ],
+  "reference_fixture_sha256": "d6b51797d9a518739f17a6a40bd2a7d9297feb51534d021ba5beb2866c9f84e3"
+}

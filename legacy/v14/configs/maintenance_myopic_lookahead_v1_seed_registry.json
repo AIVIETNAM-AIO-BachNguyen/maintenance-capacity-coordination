@@ -1,0 +1,7 @@
+{
+  "protocol": "maintenance_myopic_lookahead_v1",
+  "panels": {
+    "full": {"evaluation_start": 36000000, "evaluation_count": 128, "analysis_seed": 36100000, "forecast_seed": 36200000},
+    "smoke": {"evaluation_start": 36300000, "evaluation_count": 4, "analysis_seed": 36400000, "forecast_seed": 36500000}
+  }
+}

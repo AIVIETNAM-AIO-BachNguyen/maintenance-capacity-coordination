@@ -1,0 +1,80 @@
+{
+  "protocol": "maintenance_assignment_scoring_v1",
+  "panels": {
+    "full": {
+      "train_seeds": [
+        18100000,
+        18100001,
+        18100002
+      ],
+      "development_cohorts": [
+        18200000,
+        18200001,
+        18200002,
+        18200003,
+        18200004,
+        18200005
+      ],
+      "development_shocks": [
+        18300000,
+        18300001
+      ],
+      "test_cohorts": [
+        18400000,
+        18400001,
+        18400002,
+        18400003,
+        18400004,
+        18400005,
+        18400006,
+        18400007,
+        18400008,
+        18400009,
+        18400010,
+        18400011,
+        18400012,
+        18400013,
+        18400014,
+        18400015,
+        18400016,
+        18400017,
+        18400018,
+        18400019,
+        18400020,
+        18400021,
+        18400022,
+        18400023
+      ],
+      "test_shocks": [
+        18500000,
+        18500001,
+        18500002,
+        18500003
+      ],
+      "analysis_seed": 18600000,
+      "diagnostic_selection_seed": 18800000,
+      "diagnostic_evaluation_seed": 18900000
+    },
+    "smoke": {
+      "train_seeds": [
+        18700000
+      ],
+      "development_cohorts": [
+        18700020
+      ],
+      "development_shocks": [
+        18700030
+      ],
+      "test_cohorts": [
+        18700040
+      ],
+      "test_shocks": [
+        18700050,
+        18700051
+      ],
+      "analysis_seed": 18700060,
+      "diagnostic_selection_seed": 18700070,
+      "diagnostic_evaluation_seed": 18700080
+    }
+  }
+}

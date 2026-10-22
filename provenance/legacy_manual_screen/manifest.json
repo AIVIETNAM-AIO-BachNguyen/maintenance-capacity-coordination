@@ -1,0 +1,33 @@
+{
+  "cases": [
+    "reciprocal_scale2",
+    "interchangeable_scale1"
+  ],
+  "counts": {
+    "pairs": 8,
+    "ticks": 512
+  },
+  "expected_pairs": 8,
+  "expected_ticks": 512,
+  "finished_utc": "2026-10-22T04:48:29.094274+00:00",
+  "git_commit": "fceaff815424e0c8d387474a55988a5aeb305a9d",
+  "kind": "manual_mechanism_screen",
+  "output_hashes": {
+    "paired_ticks.jsonl": "b68c69be04e40a6fd84c7bf42d8bfec6e57673c3db5a11faa544bb9708e74a01",
+    "summary.json": "cebe3ec30dddbc5b675bbe46a5ef08722d60685f074eee7ee3b2b032f5401cfd"
+  },
+  "protocol": "docs/machine_capacity_coordination_formulation_vi.md",
+  "seeds": [
+    76000000,
+    76000001,
+    76000002,
+    76000003
+  ],
+  "source_hashes": {
+    "docs/machine_capacity_coordination_formulation_vi.md": "41c39a99f270558d1fe55543f59f7752c6c759a26ce12afcc67c662fcb494534",
+    "src/ht_pdm_fjsp/maintenance_dispatch.py": "7c542047128e5c9816d53d20e74bd8055a77c7ef99b8a99275dd26c86e81cb8c",
+    "src/ht_pdm_fjsp/maintenance_request_policies.py": "1e168a44fd8126f6a5fdf680bc492e96f5a7f718e87f96dbd60dbe103efe0d64",
+    "src/ht_pdm_fjsp/maintenance_requests.py": "3288f11fdc9adbd999b9a719900280bbf38788f3e3f16c6cb3ff28694229fc65"
+  },
+  "status": "COMPLETED"
+}

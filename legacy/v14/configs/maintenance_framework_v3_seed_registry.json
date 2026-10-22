@@ -1,0 +1,11 @@
+{
+  "version": "maintenance_framework_v1",
+  "campaign_version": "maintenance_framework_v3_teacher_ppo",
+  "training": {"start": 64000000, "count": 3},
+  "development": {"start": 64100000, "count": 16},
+  "sealed_test": {"start": 64200000, "count": 64},
+  "forecast_seed": 64300000,
+  "bootstrap_seed": 64400000,
+  "smoke": {"start": 64500000, "count": 2},
+  "teacher_bank": {"start": 64600000, "count": 96, "per_training_seed": 32}
+}

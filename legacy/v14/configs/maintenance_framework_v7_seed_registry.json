@@ -1,0 +1,10 @@
+{
+  "version": "maintenance_framework_v1",
+  "campaign_version": "maintenance_framework_v7_canonical_assignment",
+  "training": {"start": 68000000, "count": 5},
+  "development": {"start": 68100000, "count": 16},
+  "sealed_test": {"start": 68200000, "count": 64},
+  "forecast_seed": 68300000,
+  "bootstrap_seed": 68400000,
+  "smoke": {"start": 68500000, "count": 2}
+}

@@ -1,0 +1,33 @@
+{
+  "protocol": "maintenance_timing_diagnostic_v1",
+  "panels": {
+    "full": {
+      "cohorts": [
+        13100000,
+        13100001,
+        13100002,
+        13100003,
+        13100004,
+        13100005,
+        13100006,
+        13100007
+      ],
+      "physical_shocks": [
+        13200000,
+        13200001
+      ],
+      "forecast_seed": 13300000,
+      "analysis_seed": 13400000
+    },
+    "smoke": {
+      "cohorts": [
+        13500000
+      ],
+      "physical_shocks": [
+        13500010
+      ],
+      "forecast_seed": 13500020,
+      "analysis_seed": 13500030
+    }
+  }
+}

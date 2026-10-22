@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.DS_Store
+artifacts/
+lab_results/
+/checkpoints/
+output/
+legacy/v14/research_result/framework_v14_dev_20261020T185303Z/
+legacy/v14/research_result/framework_v7_full_20261020T012531Z/
+legacy/v14/research_result/framework_v14_audit_20261020T200552Z/

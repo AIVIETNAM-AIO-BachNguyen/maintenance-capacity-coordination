@@ -1,0 +1,8 @@
+{
+  "campaign_version": "maintenance_framework_v13_opportunity_cost_dev_v1",
+  "training": {"start": 72500000, "count": 5},
+  "development": {"start": 72510000, "count": 16},
+  "smoke": {"start": 72520000, "count": 2},
+  "forecast_seed": 72530000,
+  "bootstrap_seed": 72540000
+}

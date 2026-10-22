@@ -1,0 +1,35 @@
+{
+  "protocol": "maintenance_decision_headroom_v1",
+  "panels": {
+    "full": {
+      "cohorts": [
+        15100000,
+        15100001,
+        15100002,
+        15100003,
+        15100004,
+        15100005,
+        15100006,
+        15100007
+      ],
+      "physical_shocks": [
+        15200000,
+        15200001
+      ],
+      "selection_seed": 15300000,
+      "evaluation_seed": 15400000,
+      "analysis_seed": 15500000
+    },
+    "smoke": {
+      "cohorts": [
+        15600000
+      ],
+      "physical_shocks": [
+        15600010
+      ],
+      "selection_seed": 15600020,
+      "evaluation_seed": 15600030,
+      "analysis_seed": 15600040
+    }
+  }
+}

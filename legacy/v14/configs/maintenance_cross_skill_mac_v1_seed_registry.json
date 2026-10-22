@@ -1,0 +1,17 @@
+{
+  "protocol": "maintenance_cross_skill_mac_v1",
+  "panels": {
+    "full": {
+      "development_start": 42000000, "development_count": 16,
+      "screening_start": 42100000, "screening_count": 24,
+      "confirmation_start": 42200000, "confirmation_count": 256,
+      "analysis_seed": 42300000, "forecast_seed": 42400000
+    },
+    "smoke": {
+      "development_start": 42500000, "development_count": 2,
+      "screening_start": 42600000, "screening_count": 2,
+      "confirmation_start": 42700000, "confirmation_count": 2,
+      "analysis_seed": 42800000, "forecast_seed": 42900000
+    }
+  }
+}

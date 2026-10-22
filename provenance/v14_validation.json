@@ -1,0 +1,49 @@
+{
+  "status": "MIGRATION_USABLE_WITH_HISTORICAL_REPLAY_LIMITATION",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "top_level_tests": {
+    "passed": 99,
+    "elapsed_seconds": 6.14
+  },
+  "original_v14_tests_passed": 4,
+  "source_hashes_match_original_v14_manifest": true,
+  "selected_v14_checkpoints": 10,
+  "loaded_v7_comparator_checkpoints": 15,
+  "portable_restore": {
+    "status": "PASS",
+    "historical_files_verified": 147,
+    "repeat_restore": "PASS"
+  },
+  "training_smoke": {
+    "arms": 2,
+    "checkpoint_roundtrip": "PASS",
+    "elapsed_seconds": 3.079759792017285,
+    "operation": "training-smoke",
+    "replayed_episodes": 8,
+    "scientific_scope": "historical reproduction/engineering only",
+    "selected_states": 24,
+    "status": "COMPLETED"
+  },
+  "historical_replay": {
+    "checkpoints": 10,
+    "elapsed_seconds": 10.937505916983355,
+    "historical_metrics": "MISMATCH",
+    "historical_mismatch_episodes": 73,
+    "mean_cost": {
+      "competition": 854.321875,
+      "count_calibrated": 854.759375
+    },
+    "operation": "evaluate",
+    "replayed_episodes": 640,
+    "scientific_scope": "historical reproduction/engineering only",
+    "status": "COMPLETED"
+  },
+  "strict_original_audit": {
+    "status": "FAILED",
+    "output": "artifacts/v14_audit_20261022T051627824559Z",
+    "scope": "240 source/Q-bank replays completed; failed during selected-policy episode replay on current Mac"
+  },
+  "adapter_equivalence": "40 fixed episodes agree with isolated original runtime on same host",
+  "historical_reference_data_modified": false,
+  "scientific_interpretation": "No new performance claim, fresh TEST or independent retraining. Historical Ubuntu audit is preserved separately."
+}

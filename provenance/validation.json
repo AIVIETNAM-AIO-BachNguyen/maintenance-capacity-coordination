@@ -1,0 +1,42 @@
+{
+  "kind": "engineering_migration",
+  "status": "PASS",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "source_revision": "2343d79d70d1c1fc2f857da2a5afe35c4d501527",
+  "source_modules_byte_preserved": 5,
+  "original_reference_rule_episodes": 12,
+  "original_reference_actor_observations": 8,
+  "tests": {
+    "command": "python -m pytest -q",
+    "passed": 59,
+    "elapsed_seconds": 8.84
+  },
+  "staging_smoke": {
+    "directory": "artifacts/migration_smoke_20261022T050432376019Z",
+    "status": "COMPLETED",
+    "training_steps": 64,
+    "evaluation_episodes": 16,
+    "checkpoint_roundtrip": "PASS",
+    "python": "3.12.13",
+    "torch": "2.14.0"
+  },
+  "scientific_claim": "None: no research training, independent replication, or TEST.",
+  "destination_validation": {
+    "root": "/Users/bachng/Coding/maintenance-capacity-coordination",
+    "tests_passed": 59,
+    "test_elapsed_seconds": 9.64,
+    "smoke_directory": "artifacts/migration_smoke_20261022T050605266425Z",
+    "status": "COMPLETED",
+    "training_steps": 64,
+    "evaluation_episodes": 16,
+    "checkpoint_roundtrip": "PASS",
+    "installed_versions": {
+      "gymnasium": "1.3.0",
+      "numpy": "2.5.4",
+      "torch": "2.14.0",
+      "sb3_contrib": "2.9.0",
+      "stable_baselines3": "2.9.0"
+    },
+    "all_import_destination_hashes_match": true
+  }
+}

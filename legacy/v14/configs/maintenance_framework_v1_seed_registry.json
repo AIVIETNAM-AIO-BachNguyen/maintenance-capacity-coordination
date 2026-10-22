@@ -1,0 +1,9 @@
+{
+  "version": "maintenance_framework_v1",
+  "training": {"start": 62000000, "count": 3},
+  "development": {"start": 62100000, "count": 16},
+  "sealed_test": {"start": 62200000, "count": 64},
+  "forecast_seed": 62300000,
+  "bootstrap_seed": 62400000,
+  "smoke": {"start": 62500000, "count": 2}
+}

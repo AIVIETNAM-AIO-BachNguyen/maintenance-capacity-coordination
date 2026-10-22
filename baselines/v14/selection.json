@@ -1,0 +1,436 @@
+{
+  "competition": {
+    "72600000": {
+      "candidates": [
+        {
+          "checkpoint": "checkpoints/competition/72600000/0.pt",
+          "iteration": 0,
+          "mean_cost": 1381.109375
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600000/1.pt",
+          "iteration": 1,
+          "mean_cost": 1381.109375
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600000/2.pt",
+          "iteration": 2,
+          "mean_cost": 1381.109375
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600000/3.pt",
+          "iteration": 3,
+          "mean_cost": 909.65625
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600000/4.pt",
+          "iteration": 4,
+          "mean_cost": 859.21875
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600000/5.pt",
+          "iteration": 5,
+          "mean_cost": 851.578125
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600000/6.pt",
+          "iteration": 6,
+          "mean_cost": 850.375
+        }
+      ],
+      "checkpoint": "checkpoints/competition/72600000/6.pt",
+      "development_mean_cost": 850.375,
+      "iteration": 6,
+      "sha256": "d17bcd58ccdaca90d91e2c6b97cdf9cb8582ba3ea1d5b2cc535d4a6f57ac9dae"
+    },
+    "72600001": {
+      "candidates": [
+        {
+          "checkpoint": "checkpoints/competition/72600001/0.pt",
+          "iteration": 0,
+          "mean_cost": 1381.109375
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600001/1.pt",
+          "iteration": 1,
+          "mean_cost": 912.609375
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600001/2.pt",
+          "iteration": 2,
+          "mean_cost": 854.203125
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600001/3.pt",
+          "iteration": 3,
+          "mean_cost": 847.65625
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600001/4.pt",
+          "iteration": 4,
+          "mean_cost": 859.171875
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600001/5.pt",
+          "iteration": 5,
+          "mean_cost": 871.09375
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600001/6.pt",
+          "iteration": 6,
+          "mean_cost": 870.953125
+        }
+      ],
+      "checkpoint": "checkpoints/competition/72600001/3.pt",
+      "development_mean_cost": 847.65625,
+      "iteration": 3,
+      "sha256": "8a6477780611f4fac86498f7df6fb8083f7b079dd4476112650f87ea580026f1"
+    },
+    "72600002": {
+      "candidates": [
+        {
+          "checkpoint": "checkpoints/competition/72600002/0.pt",
+          "iteration": 0,
+          "mean_cost": 1381.109375
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600002/1.pt",
+          "iteration": 1,
+          "mean_cost": 1099.625
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600002/2.pt",
+          "iteration": 2,
+          "mean_cost": 888.1875
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600002/3.pt",
+          "iteration": 3,
+          "mean_cost": 848.796875
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600002/4.pt",
+          "iteration": 4,
+          "mean_cost": 851.140625
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600002/5.pt",
+          "iteration": 5,
+          "mean_cost": 851.625
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600002/6.pt",
+          "iteration": 6,
+          "mean_cost": 861.15625
+        }
+      ],
+      "checkpoint": "checkpoints/competition/72600002/3.pt",
+      "development_mean_cost": 848.796875,
+      "iteration": 3,
+      "sha256": "f53822f730cf677f199f6b80bd02fc7e2ea28a21b0cd773bac2341e9a4693872"
+    },
+    "72600003": {
+      "candidates": [
+        {
+          "checkpoint": "checkpoints/competition/72600003/0.pt",
+          "iteration": 0,
+          "mean_cost": 1381.109375
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600003/1.pt",
+          "iteration": 1,
+          "mean_cost": 1381.109375
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600003/2.pt",
+          "iteration": 2,
+          "mean_cost": 1381.109375
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600003/3.pt",
+          "iteration": 3,
+          "mean_cost": 1234.65625
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600003/4.pt",
+          "iteration": 4,
+          "mean_cost": 891.859375
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600003/5.pt",
+          "iteration": 5,
+          "mean_cost": 875.171875
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600003/6.pt",
+          "iteration": 6,
+          "mean_cost": 858.046875
+        }
+      ],
+      "checkpoint": "checkpoints/competition/72600003/6.pt",
+      "development_mean_cost": 858.046875,
+      "iteration": 6,
+      "sha256": "b2cc63724ab91db3db0a5a11558b94c7931ef10332dabc094882721a21e1a695"
+    },
+    "72600004": {
+      "candidates": [
+        {
+          "checkpoint": "checkpoints/competition/72600004/0.pt",
+          "iteration": 0,
+          "mean_cost": 1318.8125
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600004/1.pt",
+          "iteration": 1,
+          "mean_cost": 918.640625
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600004/2.pt",
+          "iteration": 2,
+          "mean_cost": 869.265625
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600004/3.pt",
+          "iteration": 3,
+          "mean_cost": 856.15625
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600004/4.pt",
+          "iteration": 4,
+          "mean_cost": 861.96875
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600004/5.pt",
+          "iteration": 5,
+          "mean_cost": 869.671875
+        },
+        {
+          "checkpoint": "checkpoints/competition/72600004/6.pt",
+          "iteration": 6,
+          "mean_cost": 872.09375
+        }
+      ],
+      "checkpoint": "checkpoints/competition/72600004/3.pt",
+      "development_mean_cost": 856.15625,
+      "iteration": 3,
+      "sha256": "161dbe34f8f3e643799fe41b7473fe50975ea8c39af9528b12b984a891a52ca0"
+    }
+  },
+  "count_calibrated": {
+    "72600000": {
+      "candidates": [
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600000/0.pt",
+          "iteration": 0,
+          "mean_cost": 1381.109375
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600000/1.pt",
+          "iteration": 1,
+          "mean_cost": 1381.109375
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600000/2.pt",
+          "iteration": 2,
+          "mean_cost": 1381.109375
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600000/3.pt",
+          "iteration": 3,
+          "mean_cost": 918.734375
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600000/4.pt",
+          "iteration": 4,
+          "mean_cost": 859.515625
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600000/5.pt",
+          "iteration": 5,
+          "mean_cost": 850.421875
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600000/6.pt",
+          "iteration": 6,
+          "mean_cost": 848.140625
+        }
+      ],
+      "checkpoint": "checkpoints/count_calibrated/72600000/6.pt",
+      "development_mean_cost": 848.140625,
+      "iteration": 6,
+      "sha256": "82064356e2ff71d3819623efe23735c77faaa9f845ac65eb0ed9feef9171de57"
+    },
+    "72600001": {
+      "candidates": [
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600001/0.pt",
+          "iteration": 0,
+          "mean_cost": 1381.109375
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600001/1.pt",
+          "iteration": 1,
+          "mean_cost": 908.59375
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600001/2.pt",
+          "iteration": 2,
+          "mean_cost": 853.890625
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600001/3.pt",
+          "iteration": 3,
+          "mean_cost": 855.703125
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600001/4.pt",
+          "iteration": 4,
+          "mean_cost": 864.578125
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600001/5.pt",
+          "iteration": 5,
+          "mean_cost": 864.796875
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600001/6.pt",
+          "iteration": 6,
+          "mean_cost": 874.078125
+        }
+      ],
+      "checkpoint": "checkpoints/count_calibrated/72600001/2.pt",
+      "development_mean_cost": 853.890625,
+      "iteration": 2,
+      "sha256": "bcdec1fe5f36941edd4fec5413aa808ec92412d987890a22bce78a45170a7b4a"
+    },
+    "72600002": {
+      "candidates": [
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600002/0.pt",
+          "iteration": 0,
+          "mean_cost": 1381.109375
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600002/1.pt",
+          "iteration": 1,
+          "mean_cost": 1112.796875
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600002/2.pt",
+          "iteration": 2,
+          "mean_cost": 888.859375
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600002/3.pt",
+          "iteration": 3,
+          "mean_cost": 851.734375
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600002/4.pt",
+          "iteration": 4,
+          "mean_cost": 851.203125
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600002/5.pt",
+          "iteration": 5,
+          "mean_cost": 848.625
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600002/6.pt",
+          "iteration": 6,
+          "mean_cost": 857.40625
+        }
+      ],
+      "checkpoint": "checkpoints/count_calibrated/72600002/5.pt",
+      "development_mean_cost": 848.625,
+      "iteration": 5,
+      "sha256": "daeeb4ad1cd1e8407e7c518948117d164164bf86d8052fa1ecc3e5e4de78b5d1"
+    },
+    "72600003": {
+      "candidates": [
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600003/0.pt",
+          "iteration": 0,
+          "mean_cost": 1381.109375
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600003/1.pt",
+          "iteration": 1,
+          "mean_cost": 1381.109375
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600003/2.pt",
+          "iteration": 2,
+          "mean_cost": 1381.109375
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600003/3.pt",
+          "iteration": 3,
+          "mean_cost": 1193.625
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600003/4.pt",
+          "iteration": 4,
+          "mean_cost": 868.328125
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600003/5.pt",
+          "iteration": 5,
+          "mean_cost": 860.390625
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600003/6.pt",
+          "iteration": 6,
+          "mean_cost": 858.84375
+        }
+      ],
+      "checkpoint": "checkpoints/count_calibrated/72600003/6.pt",
+      "development_mean_cost": 858.84375,
+      "iteration": 6,
+      "sha256": "0ab3541def40aef11e8a0c079eb002d8a7604619dcd7e03e23cba463341e3610"
+    },
+    "72600004": {
+      "candidates": [
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600004/0.pt",
+          "iteration": 0,
+          "mean_cost": 1321.40625
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600004/1.pt",
+          "iteration": 1,
+          "mean_cost": 914.75
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600004/2.pt",
+          "iteration": 2,
+          "mean_cost": 865.921875
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600004/3.pt",
+          "iteration": 3,
+          "mean_cost": 860.328125
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600004/4.pt",
+          "iteration": 4,
+          "mean_cost": 868.75
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600004/5.pt",
+          "iteration": 5,
+          "mean_cost": 860.140625
+        },
+        {
+          "checkpoint": "checkpoints/count_calibrated/72600004/6.pt",
+          "iteration": 6,
+          "mean_cost": 873.890625
+        }
+      ],
+      "checkpoint": "checkpoints/count_calibrated/72600004/5.pt",
+      "development_mean_cost": 860.140625,
+      "iteration": 5,
+      "sha256": "9c5a3779bc34f307d686903ecf6dd16b2c883036c190d3e394d484f92dd42c74"
+    }
+  }
+}

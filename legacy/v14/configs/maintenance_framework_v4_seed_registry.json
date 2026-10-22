@@ -1,0 +1,10 @@
+{
+  "version": "maintenance_framework_v1",
+  "campaign_version": "maintenance_framework_v4_capacity_opportunity",
+  "training": {"start": 65000000, "count": 3},
+  "development": {"start": 65100000, "count": 16},
+  "sealed_test": {"start": 65200000, "count": 64},
+  "forecast_seed": 65300000,
+  "bootstrap_seed": 65400000,
+  "smoke": {"start": 65500000, "count": 2}
+}

@@ -1,0 +1,7 @@
+{
+  "version": "maintenance_request_lifecycle_v1",
+  "smoke": {"evaluation_start": 61100000, "evaluation_count": 2},
+  "full": {"evaluation_start": 61000000, "evaluation_count": 64},
+  "forecast_seed": 61200000,
+  "bootstrap_seed": 61300000
+}

@@ -1,0 +1,29 @@
+{
+  "protocol": "maintenance_balanced_confirmation_mac_v1",
+  "candidate": "cross_d3_q050_balanced",
+  "base": "isolated_endpoint",
+  "prior_baseline_choice": {
+    "base": "isolated_endpoint",
+    "development_means": {
+      "deadline_matching": 722.5625,
+      "isolated_h6": 706.1875,
+      "isolated_endpoint": 696.625
+    }
+  },
+  "prior_baseline_choices_sha256": "099a4ce311d118361793f3b08b03fd8c126aeb14d57a11c92d5b55a58fce45d0",
+  "prior_code_commit": "8672acbbce5628761977b5ade2cb1ab8085babb1",
+  "panels": {
+    "full": {
+      "confirmation_start": 43000000,
+      "confirmation_count": 256,
+      "analysis_seed": 43100000,
+      "forecast_seed": 43200000
+    },
+    "smoke": {
+      "confirmation_start": 43300000,
+      "confirmation_count": 2,
+      "analysis_seed": 43400000,
+      "forecast_seed": 43500000
+    }
+  }
+}

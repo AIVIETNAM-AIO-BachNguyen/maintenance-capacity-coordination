@@ -1,0 +1,7 @@
+{
+  "protocol": "maintenance_skill_contention_screen_v2",
+  "panels": {
+    "full": {"screening_start": 32000000, "screening_count": 64, "confirmation_start": 32100000, "confirmation_count": 128, "analysis_seed": 32200000},
+    "smoke": {"screening_start": 32300000, "screening_count": 4, "confirmation_start": 32400000, "confirmation_count": 4, "analysis_seed": 32500000}
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "protocol": "maintenance_lookahead_boundary_v1",
+  "panels": {
+    "full": {"evaluation_start": 39000000, "evaluation_count": 128, "analysis_seed": 39100000, "forecast_seed": 39200000},
+    "smoke": {"evaluation_start": 39300000, "evaluation_count": 4, "analysis_seed": 39400000, "forecast_seed": 39500000}
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "campaign_version": "maintenance_framework_v14_identity_control_dev_v1",
+  "training": {"start": 72600000, "count": 5},
+  "development": {"start": 72610000, "count": 16},
+  "smoke": {"start": 72620000, "count": 2},
+  "forecast_seed": 72630000,
+  "bootstrap_seed": 72640000
+}

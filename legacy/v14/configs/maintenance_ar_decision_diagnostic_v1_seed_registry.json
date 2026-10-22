@@ -1,0 +1,39 @@
+{
+  "protocol": "maintenance_ar_decision_diagnostic_v1",
+  "panels": {
+    "full": {
+      "cohorts": [
+        17000000,
+        17000001,
+        17000002,
+        17000003,
+        17000004,
+        17000005,
+        17000006,
+        17000007,
+        17000008,
+        17000009,
+        17000010,
+        17000011
+      ],
+      "physical_shocks": [
+        17100000,
+        17100001
+      ],
+      "selection_seed": 17200000,
+      "evaluation_seed": 17300000,
+      "analysis_seed": 17400000
+    },
+    "smoke": {
+      "cohorts": [
+        17500000
+      ],
+      "physical_shocks": [
+        17500010
+      ],
+      "selection_seed": 17500020,
+      "evaluation_seed": 17500030,
+      "analysis_seed": 17500040
+    }
+  }
+}

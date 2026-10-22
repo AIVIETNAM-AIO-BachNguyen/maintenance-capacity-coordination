@@ -1,0 +1,8 @@
+{
+  "campaign_version": "maintenance_framework_v12_reliability_credit_dev_v1",
+  "training": {"start": 71500000, "count": 5},
+  "development": {"start": 71510000, "count": 16},
+  "smoke": {"start": 71520000, "count": 2},
+  "forecast_seed": 71530000,
+  "bootstrap_seed": 71540000
+}

@@ -1,0 +1,106 @@
+{
+  "actor_parameters": 3219,
+  "artifact_hashes": {
+    "audit.json": "57da943a126808093e04c5fd4040ffbed1f7c1d6f5298c2038dd1a5ab406f1a3",
+    "counterfactual_states.csv": "2e04b48035de25316d61332edb5d3a18663256c7dad802b4d0de506d63657719",
+    "counterfactual_states.partial.csv": "2e04b48035de25316d61332edb5d3a18663256c7dad802b4d0de506d63657719",
+    "development.csv": "6a83cdcdac8ed9659f5fd62014ec68d3a5bd1e571f027dda654a6d299edc9e5b",
+    "development.partial.csv": "6a83cdcdac8ed9659f5fd62014ec68d3a5bd1e571f027dda654a6d299edc9e5b",
+    "episodes.csv": "1edd2e0ad0dd2fa577b293977727d73a786be5b1ab260dc8873214099e90d3ca",
+    "episodes.partial.csv": "1edd2e0ad0dd2fa577b293977727d73a786be5b1ab260dc8873214099e90d3ca",
+    "initial_actor_hashes.json": "b2866fb79f5febe68f35c2897775227c2dbe37e296d06ac532d868bd1d398ad1",
+    "method_proposal.md": "ae83a4b27dfe447537c8f1811ad148a1905f892e09a8061b313ede73061994df",
+    "protocol.md": "0ebe1f2e34a0c7beec3bf4aff3e85f493f679f7e908404b4304f12def97df4a3",
+    "resolved_config.json": "fba55aeb39a5aca8da492eb5ba6b1744833fcbcd21134fea3778dfb74025481b",
+    "seed_registry.json": "08aa363558e7133bbaaa00872106c5ea2936637ee31d0b51a299d7ea652ad786",
+    "selection.json": "a8e2712f629173637b515a28d3980e3c056aa5a8c680e490373061068345766a",
+    "summary.json": "afa528fe4c2f5d6e103c0a94d9acfbab7dca171d8cd5e94e41758f6dc19c7f82",
+    "training_tapes.json": "29e93591015e5cc3935de033593edb03c199d7fa9127ff5a47412de5fc4ab10f",
+    "training_trace.csv": "e8960a041686f5e99ed41cff89ec7e0b5e0457bb49bfd037eb8397bcf55d4855",
+    "training_trace.partial.csv": "e8960a041686f5e99ed41cff89ec7e0b5e0457bb49bfd037eb8397bcf55d4855"
+  },
+  "counts": {
+    "development": 4480,
+    "evaluation": 1792,
+    "training_forecast_transitions": {
+      "competition": 5538920,
+      "count_calibrated": 5556956
+    },
+    "training_steps": 184320
+  },
+  "cwd": "/home/bachng/ht-pdm-fjsp",
+  "elapsed_seconds": 4365.4623896880075,
+  "finished_utc": "2026-10-20T20:05:49.838498+00:00",
+  "git_commit": "3abbf14559b48c3b461fe04c53f722d5d4967f6c",
+  "invocation": [
+    "/home/bachng/ht-pdm-fjsp/.venv/bin/python3",
+    "/home/bachng/ht-pdm-fjsp/src/ht_pdm_fjsp/maintenance_framework_v14_campaign.py",
+    "--profile",
+    "dev",
+    "--output-dir",
+    "research_result/framework_v14_dev_20261020T185303Z"
+  ],
+  "phase": "done",
+  "prior_comparator_hashes": {
+    "flat_free/68000000": "904b64d5216352852ac5d4c8ba097da158784917b4e129f37aca079a26e89daf",
+    "flat_free/68000001": "85fbbb3b0b3d23d83c5580391afa17f16df75e39e689c130f30219e75410d0b7",
+    "flat_free/68000002": "0476fc6701e018de0db949b42f2e8b4b25f7ffb45e6ef96caa122bd7204fd375",
+    "flat_free/68000003": "53287c8c5f6300be84e9afb3de144005510723ffe355d47a8c17f6ffe78b8b2e",
+    "flat_free/68000004": "8ae678e2006c324f9ee2fb4029151a942e543613bd72f8ecdfad4706580f6273",
+    "shared_canonical/68000000": "adec91fb076466c1aa8764bca96fc797d0abc7ac3eed63b21bcd4e914e199dba",
+    "shared_canonical/68000001": "3221f27de45db4cc8ac81dcc4e0c9e5f6cd0c979a72d7f63fc8a2d7bbec7542b",
+    "shared_canonical/68000002": "8811f2c629c8ca77314675737566cb3fb6994d509fc6f970eb06e6067fce685e",
+    "shared_canonical/68000003": "9a7641b3473dfb3a1a8378ba6116960c6caaae39c9e19e20eb7ef9a06264d239",
+    "shared_canonical/68000004": "0e9cc5fea4b2c10a54b1b22db421873edf9e7ba019981b21c41b826848f60599",
+    "shared_free/68000000": "a1217f40cb017da259b25e545a7bc33fbbc9d310d7afcfec86f7c40b877fcf18",
+    "shared_free/68000001": "aedeb320eedb8916c376f6e5cbc5f8ed99ddf11ead06ef630889dbbccb59136e",
+    "shared_free/68000002": "15d38a25982324accced4b55dc9e4247d39068236fdca2ed56a7c07c8792827a",
+    "shared_free/68000003": "052205deaaa8df6c5f44eb2a0409237b2a8b1c36896a6344fbbff4f66a5dea38",
+    "shared_free/68000004": "fdecb3251cd32d6a5240bf83c968e0dd7879870708ac6a9eecb0440b0829542a"
+  },
+  "profile": "dev",
+  "registry": {
+    "bootstrap_seed": 72640000,
+    "campaign_version": "maintenance_framework_v14_identity_control_dev_v1",
+    "development": {
+      "count": 16,
+      "start": 72610000
+    },
+    "forecast_seed": 72630000,
+    "smoke": {
+      "count": 2,
+      "start": 72620000
+    },
+    "training": {
+      "count": 5,
+      "start": 72600000
+    }
+  },
+  "runtime": {
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "torch": "2.14.0+cu126"
+  },
+  "selection_sha256": "a8e2712f629173637b515a28d3980e3c056aa5a8c680e490373061068345766a",
+  "source_hashes": {
+    "configs/maintenance_framework_v14_seed_registry.json": "08aa363558e7133bbaaa00872106c5ea2936637ee31d0b51a299d7ea652ad786",
+    "pyproject.toml": "4444d7c9169b223f1ca040bfda1f4304e5aeb8cdac4bed7643077e6d3d38a0e5",
+    "research_result/framework_v14_dev_protocol_vi.md": "0ebe1f2e34a0c7beec3bf4aff3e85f493f679f7e908404b4304f12def97df4a3",
+    "research_result/v14_capacity_matched_control_proposal_vi.md": "ae83a4b27dfe447537c8f1811ad148a1905f892e09a8061b313ede73061994df",
+    "src/ht_pdm_fjsp/maintenance_dispatch.py": "7c542047128e5c9816d53d20e74bd8055a77c7ef99b8a99275dd26c86e81cb8c",
+    "src/ht_pdm_fjsp/maintenance_framework_v1.py": "4a5f81bbfa1ad04ae09b2387edf83513b86c702efdd0a42ee52a0a4f27fafc00",
+    "src/ht_pdm_fjsp/maintenance_framework_v14_campaign.py": "4beaf1a6f26ea639ddc378de0a5ec11eaaece9cb455a1835c901b4b53bc85ea0",
+    "src/ht_pdm_fjsp/maintenance_framework_v14_policy.py": "49156d59ee9605470b4cfced90215d3191f629b2e258c3ac190d73237fdffb80",
+    "src/ht_pdm_fjsp/maintenance_framework_v6_policy.py": "67bc3bce3b5578a5f05c07dea8b4483ada9c2e9987c276ede222fc933235f5d5",
+    "src/ht_pdm_fjsp/maintenance_framework_v7_campaign.py": "131b53b6afb0348960ffc382f42dda9c00c8583a3bf0b565469c1aaada61e64a",
+    "src/ht_pdm_fjsp/maintenance_request_policies.py": "1e168a44fd8126f6a5fdf680bc492e96f5a7f718e87f96dbd60dbe103efe0d64",
+    "src/ht_pdm_fjsp/maintenance_requests.py": "3288f11fdc9adbd999b9a719900280bbf38788f3e3f16c6cb3ff28694229fc65",
+    "uv.lock": "9a3cfb0ee079202fa0fa87613933f2d040f3327d07bc0d43a36ae25dfae67b9f"
+  },
+  "started_utc": "2026-10-20T18:53:05.431369+00:00",
+  "status": "COMPLETED",
+  "timeout_seconds": 14400,
+  "training_physical_seed_count": 1920,
+  "training_physical_seed_sha256": "120db1a4405f3c968f8934e23b963cc5694f1669cc92ae81adadada4dce85faa",
+  "v7_selection_sha256": "0d0b33a45f366503bf0638da54da73a249a84ebd3fe8fb1aa101eb8589b8b0a2"
+}

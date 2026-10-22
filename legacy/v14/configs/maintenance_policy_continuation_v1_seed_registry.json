@@ -1,0 +1,13 @@
+{
+  "protocol": "maintenance_policy_continuation_v1",
+  "panels": {
+    "full": {
+      "forecast_seed": 14100000,
+      "analysis_seed": 14200000
+    },
+    "smoke": {
+      "forecast_seed": 14300000,
+      "analysis_seed": 14300010
+    }
+  }
+}

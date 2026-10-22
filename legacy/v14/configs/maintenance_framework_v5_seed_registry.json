@@ -1,0 +1,22 @@
+{
+  "version": "maintenance_framework_v1",
+  "campaign_version": "maintenance_framework_v5_postdecision_capacity",
+  "training": {
+    "start": 66000000,
+    "count": 3
+  },
+  "development": {
+    "start": 66100000,
+    "count": 16
+  },
+  "sealed_test": {
+    "start": 66200000,
+    "count": 64
+  },
+  "forecast_seed": 66300000,
+  "bootstrap_seed": 66400000,
+  "smoke": {
+    "start": 66500000,
+    "count": 2
+  }
+}
