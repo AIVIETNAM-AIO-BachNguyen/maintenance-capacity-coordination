@@ -1,0 +1,19 @@
+# Post-v8 operating-regime evidence screen
+
+Date: 2026-10-22 (Asia/Taipei). This is a source and scope screen, not a new simulator experiment, model selection exercise, or pilot prelock. V8's locked no-go remains unchanged.
+
+## Why another regime needs independent grounding
+
+The audited v8 C8-visited N4/K2 panel had 9,216 H states. Only 1,083 had a feasible second edge after C8's first choice, and only 27 had *multiple* remaining feasible edges. Same-weight context freezing changed no greedy matching. Thus the current observed trajectories weakly exercise conditional re-ranking. This does not prove contextual matching cannot help other maintenance operations. It also does not justify choosing a new synthetic configuration solely to make the mechanism look useful.
+
+## Primary sources screened
+
+- [Nielsen and Pisinger, DTU Data (2024), DOI 10.11583/DTU.25886707](https://data.dtu.dk/articles/dataset/Technician_and_Task_instances_for_a_Dynamic_Technician_Routing_and_Scheduling_problem/25886707): 11 real-life, anonymized TDC-NET field-service instances under CC BY 4.0. Public task CSVs include creation time, time window, duration, skill and relevant-technician IDs; technician CSVs include skills and daily shift windows. We verified the public metadata record and a two-row schema sample, not any workload outcome. This could support an independently prelocked *assignment-graph opportunity* study. It is telecom field service, with routing and appointment windows rather than machine health, PM/CM, failure dynamics and H+tail downtime cost; it cannot be treated as a direct replication of v8 or used to calibrate the unchanged simulator without a separately justified contract.
+- [Ruiz-Rodríguez et al., *Expert Systems with Applications* (2024), DOI 10.1016/j.eswa.2024.123404](https://orbilu.uni.lu/handle/10993/62366): the authors report a real-derived manufacturing maintenance case using ten years of historical records and eight technicians, alongside simulations. This supports the existence of larger technician pools in a related setting, but the paper's published summary does not establish the frequency of simultaneously feasible second assignments, their value interactions, or an openly reusable paired decision log for this project's H+tail objective. We have not verified a raw dataset suitable for transplanting into the current simulator.
+- [Hong, Yang and Kim, *Buildings* (2026), DOI 10.3390/buildings16142862](https://doi.org/10.3390/buildings16142862): the campus case uses real maintenance work-order records, but its reported optimization fixes personnel groups and primarily routes building visits. It does not isolate same-tick machine–technician re-ranking under evolving machine health.
+
+## Qualification for the next research step
+
+A defensible next regime needs a timestamped decision trace or operational dataset with: pending machine jobs/PM/CM state; technician skills and current busy commitments; physical compatibility; service durations; sufficiently frequent concurrent alternative assignments; and downtime/failure/economic outcomes or a documented simulator mapping. Before any new learning pilot, measure the frequency of **at least two feasible remaining edges after a first legal assignment** and whether the alternatives have materially different matching-level values, using a new prelocked panel and no v8 heldout tuning. Document any operating-contract or N/K change with a versioned protocol and rebuild the matching controls. A pass in a field-service task graph alone would establish structural opportunity, not H+tail benefit or validity of the machine-failure model.
+
+No v9 architecture, synthetic workload change, independent v8 replication or new TEST is opened by this screen. The needed evidence is an actual matching-relevant operating regime, not a stronger scorer on the already failed v8 heldout panel.
