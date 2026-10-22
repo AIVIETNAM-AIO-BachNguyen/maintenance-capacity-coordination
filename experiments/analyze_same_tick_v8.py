@@ -26,6 +26,19 @@ TRAIN = ROOT / "artifacts/same_tick_v8_train_20261022T143004651031Z"
 HELDOUT = ROOT / "artifacts/same_tick_v8_heldout_20261022T143941233791Z"
 
 
+def root_graph_profile(edge_mask):
+    """Count residual choices for every legal first edge, independent of policy score."""
+    legal = [edge for edge, allowed in enumerate(edge_mask) if allowed]
+    with_second = with_multiple_second = 0
+    for first in legal:
+        m0, w0 = EDGES[first]
+        residual = sum(EDGES[next_edge][0] != m0 and EDGES[next_edge][1] != w0
+                       for next_edge in legal)
+        with_second += residual >= 1
+        with_multiple_second += residual >= 2
+    return len(legal), with_second, with_multiple_second
+
+
 def second_step_tv(policy, decision):
     first = decision["tokens"][0] if decision["tokens"] else None
     if first is None or first == STOP:
@@ -112,8 +125,16 @@ def main():
                     trained_first_changed = trained_matching_changed = 0
                     tv_values, score_deltas, margins = [], [], []
                     one_edge = multiple_edges = edge_rank_changes = near_margin = 0
+                    root_edges = root_with_second = root_with_multiple_second = 0
+                    root_states_with_second = root_states_with_multiple_second = 0
                     for _ in range(48):
                         active_decision = choose(active, env, deterministic=True)
+                        n_root, n_second, n_multiple = root_graph_profile(active_decision["edge_mask"])
+                        root_edges += n_root
+                        root_with_second += n_second
+                        root_with_multiple_second += n_multiple
+                        root_states_with_second += n_second > 0
+                        root_states_with_multiple_second += n_multiple > 0
                         frozen_decision = choose(frozen, env, deterministic=True)
                         trained_d_decision = choose(trained_d, env, deterministic=True)
                         assert active_decision["tokens"][:1] == frozen_decision["tokens"][:1]
@@ -140,6 +161,11 @@ def main():
                     assert abs(env.metrics()["objective"] - expected["objective"]) < 1e-8
                     row = {"case": case, "train_root": root, "seed": seed,
                            "checkpoint_sha256": selected["checkpoint_sha256"],
+                           "root_first_edges": root_edges,
+                           "root_first_edges_with_second": root_with_second,
+                           "root_first_edges_with_multiple_second": root_with_multiple_second,
+                           "root_states_with_second": root_states_with_second,
+                           "root_states_with_multiple_second": root_states_with_multiple_second,
                            "second_step_opportunities": opportunities,
                            "one_edge_second_opportunities": one_edge,
                            "multiple_edge_second_opportunities": multiple_edges,
@@ -161,6 +187,11 @@ def main():
         assert len(rows) == len(pilot.CASES) * len(pilot.TRAIN_ROOTS) * len(pilot.HELDOUT_SEEDS)
         summary = {"episodes": len(rows), "H_states": len(rows) * 48,
                    "by_case": {case: {
+                       "root_first_edges": sum(r["root_first_edges"] for r in rows if r["case"] == case),
+                       "root_first_edges_with_second": sum(r["root_first_edges_with_second"] for r in rows if r["case"] == case),
+                       "root_first_edges_with_multiple_second": sum(r["root_first_edges_with_multiple_second"] for r in rows if r["case"] == case),
+                       "root_states_with_second": sum(r["root_states_with_second"] for r in rows if r["case"] == case),
+                       "root_states_with_multiple_second": sum(r["root_states_with_multiple_second"] for r in rows if r["case"] == case),
                        "second_step_opportunities": sum(r["second_step_opportunities"] for r in rows if r["case"] == case),
                        "one_edge_second_opportunities": sum(r["one_edge_second_opportunities"] for r in rows if r["case"] == case),
                        "multiple_edge_second_opportunities": sum(r["multiple_edge_second_opportunities"] for r in rows if r["case"] == case),
