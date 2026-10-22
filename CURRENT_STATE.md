@@ -1,6 +1,6 @@
 # Current state
 
-Date: 2026-10-22, Asia/Taipei. V1–v3 are completed with their original gates and raw artifacts preserved. V4 forecast-informed demand/commitment coordination is complete; see `docs/forecast_demand_commitment_pilot_v4_findings.md`. V5 is the sole current, prelocked bounded mechanism check; see `docs/pair_commitment_interaction_check_v5.md`.
+Date: 2026-10-22, Asia/Taipei. V1–v3 are completed with their original gates and raw artifacts preserved. V4 forecast-informed demand/commitment coordination is complete; see `docs/forecast_demand_commitment_pilot_v4_findings.md`. V5 bounded joint-service interaction check is complete and audited; see `docs/pair_commitment_interaction_check_v5_findings.md`.
 
 - V1 binary-requester pilot and its authorized 32-seed sealed TEST are complete and closed. C beat learned always-request D, but capacity feedback did not establish a robust advantage over matched/full-information and strong controls. Its labelled “replication” was held-out evaluation of fixed checkpoints, not independent training replication. The separate fixed-threshold G diagnostic favored G over C on its own panel.
 - V2's prelocked early-PM headroom check passed audit but missed its practical forecast-gain gate (−0.44 versus −2.0). No v2 learner was trained.
@@ -10,4 +10,4 @@ Date: 2026-10-22, Asia/Taipei. V1–v3 are completed with their original gates a
 
 ## One next experiment
 
-Run and replay-audit the prelocked v5 bounded joint-service interaction check on 16 fresh physical seeds per case. Its 129-test and two-episode Ubuntu engineering gates passed. Only a passed independent-bank headroom gate permits a separately prelocked learner pilot. Do not tune v4 on held-out results or open TEST.
+Prelock a same-information, same-matching learner pilot that tests whether an explicit joint service-start term realizes the v5 representation opportunity against an edge-additive ablation and full-information flat control. Include F2/V14/risk same-panel references; keep V1 TEST and v2–v4 gates closed. No new TEST is authorized.

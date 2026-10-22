@@ -89,3 +89,9 @@ Decision: test the operationally distinct simultaneous-service commitment intera
 ## 2026-10-22 — v5 engineering gate
 
 The v5 runner and replay auditor implement the locked additive complete-matching comparison, independent common bank, fresh seed roles, H+tail F2 trajectory, paired physical clustering and refusal to overwrite artifacts. All 129 repository tests passed. The bounded two-episode Ubuntu engineering smoke `artifacts/pair_commitment_v5_smoke_20261022T084352280973Z` replay-audited PASS: 96 H states, 20,352 F2 selection and 3,840 independent-bank forecast transitions. This smoke is not scientific evidence. Next: commit/push verified code, then open only the locked 16-seed-per-case diagnostic and audit it.
+
+## 2026-10-22 — v5 independent-bank mechanism check
+
+The locked 16-seed-per-case diagnostic completed 1,536 F2 H states and its replay audit passed. In reciprocal, 151/768 states admitted two simultaneous starts; the additive edge decomposition disagreed with F2 in 50.99% of them. Its paired independent-bank forecast regret was +2.91 within that stratum (raw-episode-cluster interval [+1.53,+4.65]) and +0.57 across all H states. Every predeclared gate passed. Specialist/generalist showed much smaller effects (+0.20 within 68 eligible states). Full limitations and artifacts: `pair_commitment_interaction_check_v5_findings.md`.
+
+Decision: there is a specific finite-horizon representation opportunity for joint starts in the reciprocal case, **not** proved H+tail benefit over F2 or learned-policy success. A separately prelocked learner pilot is justified; keep same action/information and explicit edge-additive and flat controls. Do not alter prior protocols or open TEST.
