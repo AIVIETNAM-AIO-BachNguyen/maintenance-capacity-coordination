@@ -24,6 +24,8 @@ dev = ["pytest>=8.3,<9"]
 [project.scripts]
 mcc-smoke = "maintenance_capacity_coordination.smoke:main"
 mcc-v14 = "maintenance_capacity_coordination.v14:main"
+mcc-pilot = "maintenance_capacity_coordination.pilot:main"
+mcc-pilot-analyze = "maintenance_capacity_coordination.pilot_analysis:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
