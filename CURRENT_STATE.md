@@ -1,6 +1,6 @@
 # Current state
 
-Date: 2026-10-22, Asia/Taipei. V1–v3 are completed with their original gates and raw artifacts preserved. V4 forecast-informed demand/commitment coordination is the sole current experiment and is now complete; see `docs/forecast_demand_commitment_pilot_v4_findings.md`.
+Date: 2026-10-22, Asia/Taipei. V1–v3 are completed with their original gates and raw artifacts preserved. V4 forecast-informed demand/commitment coordination is complete; see `docs/forecast_demand_commitment_pilot_v4_findings.md`. V5 is the sole current, prelocked bounded mechanism check; see `docs/pair_commitment_interaction_check_v5.md`.
 
 - V1 binary-requester pilot and its authorized 32-seed sealed TEST are complete and closed. C beat learned always-request D, but capacity feedback did not establish a robust advantage over matched/full-information and strong controls. Its labelled “replication” was held-out evaluation of fixed checkpoints, not independent training replication. The separate fixed-threshold G diagnostic favored G over C on its own panel.
 - V2's prelocked early-PM headroom check passed audit but missed its practical forecast-gain gate (−0.44 versus −2.0). No v2 learner was trained.
@@ -8,6 +8,6 @@ Date: 2026-10-22, Asia/Taipei. V1–v3 are completed with their original gates a
 - V4's prelocked forecast-distillation panel completed with 123 tests and final Ubuntu smoke PASS, 4,608 teacher state/label rows, 18 student trials and 32 paired held-out physical seeds per case. Training and held-out replay audits PASS. S4−G4 was +0.57, S4−R4 −0.37, and S4−F2 +35.93 H+tail cost; only the deployment-speed condition passed. The replication gate failed. All raw artifacts and negative findings remain in `docs/forecast_demand_commitment_pilot_v4_findings.md`; no v4 independent training replication or TEST is eligible.
 - Raw artifacts, failed gates and the v1 TEST are preserved. The current branch is `codex/forecast-demand-commitment-v4`; prior v1–v3 branches remain pushed.
 
-## One next research decision
+## One next experiment
 
-Reassess whether a distinct operational mechanism with credible headroom remains in this simulator. Do not tune v4 on its held-out panel or open another architecture/run solely to find a positive result. If no justified mechanism exists, report the negative/mixed framework evidence rather than claiming a validated capacity–commitment benefit.
+Implement and audit the v5 bounded joint-service interaction check on fresh seeds. Only a passed independent-bank headroom gate permits a separately prelocked learner pilot. Do not tune v4 on held-out results or open TEST.
