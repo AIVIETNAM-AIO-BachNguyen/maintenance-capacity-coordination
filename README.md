@@ -57,8 +57,10 @@ uv run --extra dev pytest -q
 uv run python -m experiments.audit_commitment_headroom_v2 --run artifacts/commitment_headroom_v2_check_20261022T070841552901Z
 ```
 
-The v1 `replicate` command above evaluated fixed trained checkpoints on fresh physical seeds; independent training replication would require new training seeds and fresh models. No new TEST is authorized.
+The v1 `replicate` command above evaluated fixed trained checkpoints on fresh physical seeds; independent training replication would require new training seeds and fresh models. The later user authorization for a 32-seed sealed TEST does not override v3's failed replication gate.
 
 ## Structured matching pilot v3
 
 A [separate prelocked pilot](docs/structured_demand_commitment_pilot_v3.md) tests whether a [shared machine-demand/worker-commitment actor](docs/structured_demand_commitment_proposal_v3.md) improves PPO learning against a flat full-information actor on the same threshold-admitted matching set. It includes a remaining-time ablation and contextual always-request/strong rule controls. The v2 early-PM no-go result is unchanged. A bounded Ubuntu smoke, 114 tests, DEV training and held-out audits passed. [The v3 findings](docs/structured_demand_commitment_pilot_v3_findings.md) show a modest S gain over matched G3 that missed the locked practical gate, and no measured remaining-time ablation benefit. Independent training replication and new TEST remain unopened.
+
+The [primary-literature positioning and research decision](docs/research_positioning_and_decision.md) records why the current evidence does not yet support a validated capacity-coordination benefit or another automatic campaign.
