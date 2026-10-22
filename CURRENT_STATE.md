@@ -10,4 +10,4 @@ Date: 2026-10-22, Asia/Taipei. One current scientific experiment: the prelocked 
 
 ## Next research decision
 
-V6 is closed. The desired validated maintenance-demand/technician-capacity coordination benefit remains unproven. Before another campaign, formulate a distinct operational or learning hypothesis and prelock a fresh protocol with same-information/action controls. Do not tune v6 architecture, labels, selection or gates on its held-out panel.
+V6 is closed. The desired validated maintenance-demand/technician-capacity coordination benefit remains unproven. The source-grounded decision in `docs/post_v6_formulation_decision.md` finds no justified same-contract architecture campaign. Next, establish whether the target operation has a binding pre-start service/technician commitment absent from the simulator. If it does, specify its real decision order and consequences before a new versioned contract and bounded headroom protocol; otherwise retain the negative/mixed result. Do not tune v6 or open TEST.
