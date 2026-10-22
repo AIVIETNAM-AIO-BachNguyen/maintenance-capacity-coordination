@@ -377,9 +377,12 @@ def audit_evaluation(run, manifest):
             source = students if arm in ARMS else (contextual if arm in ("G", "D") else controls)
             selected = [r for r in source if r["case"] == case and r["arm"] == arm]
             for field in secondary_fields:
-                require(abs(analysis["secondary_mean_by_case_arm"][case][arm][field]
-                            - float(np.mean([r[field] for r in selected]))) < 1e-8,
-                        "secondary aggregation")
+                reported = analysis["secondary_mean_by_case_arm"][case][arm][field]
+                if all(field in r for r in selected):
+                    require(abs(reported - float(np.mean([r[field] for r in selected]))) < 1e-8,
+                            "secondary aggregation")
+                else:
+                    require(reported is None, "unavailable secondary aggregation")
     reciprocal = analysis["pair_interaction_absolute_errors"][CASES[0]]
     a_error = reciprocal["A6"]["mean_absolute_cost_error"]
     ratio = reciprocal["J6"]["mean_absolute_cost_error"] / a_error if a_error > 0 else None

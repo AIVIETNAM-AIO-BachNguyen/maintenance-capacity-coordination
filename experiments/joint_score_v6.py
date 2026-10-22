@@ -565,7 +565,8 @@ def analyze_panel(run, seeds, roots):
             selected = [r for r in source if r["case"] == case and r["arm"] == arm]
             if not selected:
                 raise RuntimeError(f"missing v6 secondary rows {case} {arm}")
-            secondary[case][arm] = {field: float(np.mean([r[field] for r in selected]))
+            secondary[case][arm] = {field: (float(np.mean([r[field] for r in selected]))
+                                             if all(field in r for r in selected) else None)
                                     for field in secondary_fields}
     result = {"comparisons_J6_minus": comparisons,
               "pair_interaction_absolute_errors": errors,
