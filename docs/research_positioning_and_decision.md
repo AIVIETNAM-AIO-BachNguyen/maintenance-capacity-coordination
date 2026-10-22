@@ -19,6 +19,10 @@ The present simulator has its own failure law, request lifecycle, technician ski
 
 The v3 actor uses present machine features, worker features and complete feasible-match logits. Its embeddings are neither calibrated economic values nor independent machine policies. The current evidence supports a negative or mixed finite-budget result for this implementation; it does not prove that coordination or PPO is intrinsically ineffective.
 
+## Source-level screen of a longer rollout horizon
+
+The F2 control uses a six-tick forecast horizon. In the reciprocal case, all legal service times are 2 or 6 ticks; in the specialist/generalist case, one legal machine–technician edge lasts 8 ticks, but the same machine has a 2-tick alternative. On the v3 held-out panel, S cost 813.19 versus F2 724.53 in the reciprocal case (an 88.66 gap), compared with 987.46 versus 979.81 (a 7.65 gap) in the specialist/generalist case. Thus a service commitment extending beyond F2's six-tick horizon cannot explain the largest observed S–F2 gap. This is a configuration and existing-outcome screen, not a measured 12-tick forecast result or proof that longer-horizon interactions never matter. It does not justify a new horizon campaign by itself.
+
 ## Decision
 
 Do not launch another architecture or seed campaign from these outcomes alone. The next research step is to specify a **distinct operational decision or commitment mechanism** whose potential advantage over strong controls can be measured without changing physics, creating artificial costs, concealing health or reusing sealed TEST. Before any scientific run, write a new proposal and locked bounded protocol with fresh seed roles, a same-contract F2 comparison and a falsifiable practical headroom threshold. If no such mechanism can be justified, report the negative/mixed result as the outcome of this project rather than claiming a validated capacity-coordination benefit.
