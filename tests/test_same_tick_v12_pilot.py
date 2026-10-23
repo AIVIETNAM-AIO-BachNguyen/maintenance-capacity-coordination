@@ -3,7 +3,7 @@ import torch
 
 from experiments import audit_same_tick_v12 as audit
 from experiments import same_tick_pilot_v12 as pilot
-from experiments.scaled_n5k3_v12_config import CASES, configs
+from experiments.scaled_n5k3_v12_config import CASES, configs, evaluate_controls
 from maintenance_capacity_coordination.scaled_coordination_v11 import ScaledCoordinationEnv
 from maintenance_capacity_coordination.same_tick_policy_v12 import SequencePolicy
 
@@ -56,3 +56,13 @@ def test_locked_gate_requires_both_trained_and_same_weight_feedback():
     assert not decision["go"]
     assert not decision["conditions"]["C12_minus_CF12_at_most_minus_10"]
     assert not decision["conditions"]["C12_minus_CF12_both_cases_negative"]
+
+
+def test_control_wrapper_covers_both_cases_and_accounting(tmp_path):
+    rows = evaluate_controls(tmp_path, (pilot.SMOKE_SEEDS[0],), panel="smoke")
+    assert len(rows) == 4
+    assert {(r["case"], r["arm"]) for r in rows} == {
+        (case, "F_" + control) for case in CASES for control in ("risk_matching", "rollout")}
+    for row in rows:
+        audit.episode_accounting(row)
+        assert row["invalid_assignments"] == 0

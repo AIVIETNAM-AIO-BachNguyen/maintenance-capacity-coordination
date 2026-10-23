@@ -20,7 +20,7 @@ def evaluate_controls(run, seeds, *, panel):
     import time
     from tqdm.auto import tqdm
     from ht_pdm_fjsp.maintenance_framework_v1 import HORIZON, RuleController
-    from maintenance_capacity_coordination.scaled_coordination_v12 import ScaledCoordinationEnv
+    from maintenance_capacity_coordination.scaled_coordination_v11 import ScaledCoordinationEnv
     from maintenance_capacity_coordination.coordination_v1 import BASE_VERSION
     from ht_pdm_fjsp.maintenance_dispatch import role_seed
 
