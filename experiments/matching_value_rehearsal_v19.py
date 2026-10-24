@@ -94,7 +94,9 @@ def ppo_update(policy, optimizer, transitions, bootstrap, labels, cycle: LabelCy
             label_ids = cycle.take(label_batch_size)
             label_batch = subset(labels, torch.as_tensor(label_ids, dtype=torch.long))
             matching_loss = listwise_loss(policy, label_batch)
-            loss = base_loss + weight * matching_loss
+            # Preserve the small rehearsal scalar beside a large critic loss;
+            # casting the sum does not change either component's gradient.
+            loss = base_loss.double() + weight * matching_loss.double()
             if not torch.isfinite(loss):
                 raise FloatingPointError('non-finite v19 PPO/rehearsal loss')
             optimizer.zero_grad(set_to_none=True)
