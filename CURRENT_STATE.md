@@ -1,6 +1,6 @@
 # Current state
 
-Date: 2026-10-25 (Asia/Taipei). **V20 is closed, no-go; no experiment is currently prelocked.** The goal of a useful learned maintenance-demand/technician-capacity coordination framework remains unproven. All RL training data come from the simulator; real logs and public datasets are optional later calibration.
+Date: 2026-10-25 (Asia/Taipei). **V20 is closed, no-go; V21 reliability-weighted pairwise supervision is the one current prelocked experiment.** The goal of a useful learned maintenance-demand/technician-capacity coordination framework remains unproven. All RL training data come from the simulator; real logs and public datasets are optional later calibration.
 
 ## Current research boundary
 
@@ -26,5 +26,7 @@ C20−CF20 is negative in both cases and its interval is below zero, evidence of
 - V8–v12 same-tick feedback pilots did not pass joint dynamic-versus-frozen and practical cost gates. V13 independently validated a conditional second-edge H+tail value gap, not a learned policy gain.
 - V14 canonical matching PPO, v15 simulator-label pretraining, v16 dynamic bipartite representation and v17 complete-matching value coverage all missed locked practical feedback gates. See their respective findings in `docs/`.
 - V18 improved label precision but C18−D18 was −9.18 and same-weight C18−CF18 −0.27; no-go. V19 retained training-bank labels during PPO but C19−C18 was +1.79, C19−D19 −15.21 and C19−CF19 −3.30; no-go. Their full reports are `docs/matching_value_precision_v18_findings.md` and `docs/matching_value_retention_v19_findings.md`.
+
+V21 (`docs/reliability_weighted_pairwise_v21_prelock.md`) is locked before implementation and outcomes. It changes only the matching-label supervised loss: reliability-weighted pairwise comparisons from the audited v20 16-tape training bank versus a matched listwise L21 control, with dynamic C21, frozen-trained D21 and same-weight CF21. Actor, PPO budget, simulator physics and action set stay fixed. Fresh v21 train/DEV/held-out seeds and joint practical gates are predeclared. No v21 scientific outcome exists.
 
 Follow `docs/experiment_workflow.md`: separately prelock any new scientific experiment, test and run bounded Ubuntu smoke, audit before outcome interpretation, preserve failed and partial artifacts, and commit/push only relevant verified changes. The user's explicit lab-run authorization applies here, but no new TEST, SSH/rsync or destructive Git action is authorized.
