@@ -51,6 +51,10 @@ On the *training labels*, the equal-case/equal-root average 16-tape candidate-li
 
 The discrepancy between stable-enough continuation targets and weak supervised fit, followed by low same-weight action and physical effects, identifies a concrete unresolved uncertainty: whether the current actor/training path can preserve and use matching-level economic ranking information after PPO. That uncertainty warrants an independently justified training-only diagnosis before another architecture or scientific campaign. It does not justify reusing held-out outcomes to tune v18.
 
+### Checkpoint-path addendum (descriptive, 2026-10-24)
+
+The later training-bank-only artifact `artifacts/v18_checkpoint_path_20261024T092054623292Z` evaluated every immutable pretraining and PPO milestone checkpoint on the same audited v18 training labels, alongside the already logged DEV cost. It used no held-out or TEST state for model choice. Mean 16-tape training-label cross-entropy for C18 was 2.041 → 2.223 → 2.439 → 2.965 in case a and 2.046 → 2.307 → 2.615 → 2.974 in case b at pretrain → 2,048 → 4,096 → 8,192 PPO decisions. D18 and L18 showed the same monotone rise in both cases. Thus the loss increase at the selected checkpoint was not an artifact of choosing one unusual milestone; it began by the first measured PPO checkpoint. DEV H+tail cost did not move monotonically with training-label loss. This localizes supervised-ranking drift but does not establish that preventing it will improve physical cost.
+
 ## Secondary outcomes and compute
 
 All rows below are held-out descriptive means per episode, pooled across the two cases and three training roots. Availability is the simulator's H availability; queues are ticks through H+tail. They are not independent endpoints for the prelocked gate.
