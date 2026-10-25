@@ -1,6 +1,6 @@
 # V22 sparse-skill structural opportunity qualification: prelock
 
-Status: **locked before v22 implementation, smoke or simulation outcomes**. V1–v21 gates remain final; v21 is closed no-go. This is a bounded simulator-only qualification for one possible next same-tick learning pilot, not evidence that a learned policy helps. No new TEST is authorized.
+Status: initial protocol **locked before v22 implementation, smoke or simulation outcomes**; the explicit duration fallback below was amended after a focused engineering test and before any smoke or simulation outcome. V1–v21 gates remain final; v21 is closed no-go. This is a bounded simulator-only qualification for one possible next same-tick learning pilot, not evidence that a learned policy helps. No new TEST is authorized.
 
 ## Question and reason for this contract
 
@@ -10,7 +10,7 @@ V22 first asks whether the **unchanged simulator law and threshold admission** c
 
 ## Fixed configurations, chosen without cost outcomes
 
-Use the existing N5/K3 `n5_k3_sparse` base generator with full profile, base config seeds 74760000/74760001, H48+tail16, failure age/probability and all cost parameters unchanged. Set only service-time entries outside the following predeclared compatible-pair sets to zero; retain generated durations and restoration values on compatible pairs. Every machine and technician has at least one compatible partner. The masks were chosen by a static 5×3 graph enumeration: the lexicographically first eight-edge graphs with full matching capacity three, all vertices covered, and a physical same-edge-count residual capacity-one/two contrast, separately for worker-degree signatures (4,3,1) and (5,2,1). No simulator trajectory or economic outcome was used to choose them.
+Use the existing N5/K3 `n5_k3_sparse` base generator with full profile, base config seeds 74760000/74760001, H48+tail16, failure age/probability and all cost parameters unchanged. Set service-time entries outside the following predeclared compatible-pair sets to zero. On a compatible pair, retain the generated duration if positive; if the base sparse generator returned zero, use a fixed three-tick duration within its existing 2–4 tick range. Retain the generated restoration values. This deterministic fallback is an engineering amendment made before any v22 simulator run after the first focused test exposed a zero-duration/declared-edge conflict. Every machine and technician has at least one compatible partner. The masks were chosen by a static 5×3 graph enumeration: the lexicographically first eight-edge graphs with full matching capacity three, all vertices covered, and a physical same-edge-count residual capacity-one/two contrast, separately for worker-degree signatures (4,3,1) and (5,2,1). No simulator trajectory or economic outcome was used to choose them.
 
 - Case `n5k3_sparse_skill_a`, bit mask 4767 over machine-major edge indices: {(0,0),(0,1),(0,2),(1,0),(1,1),(2,1),(3,0),(4,0)}.
 - Case `n5k3_sparse_skill_b`, bit mask 4829: {(0,0),(0,2),(1,0),(1,1),(2,0),(2,1),(3,0),(4,0)}.
