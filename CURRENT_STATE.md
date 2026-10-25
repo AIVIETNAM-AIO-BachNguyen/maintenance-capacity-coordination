@@ -1,6 +1,6 @@
 # Current state
 
-Date: 2026-10-25 (Asia/Taipei). **V21 reliability-weighted pairwise supervision is closed, no-go.** The goal of a useful learned maintenance-demand/technician-capacity coordination framework remains unproven. All RL training data come from the simulator; real logs and public datasets are optional later calibration. No scientific successor is prelocked.
+Date: 2026-10-25 (Asia/Taipei). **V21 reliability-weighted pairwise supervision is closed, no-go.** The goal of a useful learned maintenance-demand/technician-capacity coordination framework remains unproven. All RL training data come from the simulator; real logs and public datasets are optional later calibration. V22 has one separately prelocked simulator-only sparse-skill structural-opportunity qualification; no v22 learning pilot is yet prelocked.
 
 ## Current research boundary
 
@@ -30,5 +30,7 @@ C20−CF20 is negative in both cases and its interval is below zero, evidence of
 - V18 improved label precision but C18−D18 was −9.18 and same-weight C18−CF18 −0.27; no-go. V19 retained training-bank labels during PPO but C19−C18 was +1.79, C19−D19 −15.21 and C19−CF19 −3.30; no-go. Their full reports are `docs/matching_value_precision_v18_findings.md` and `docs/matching_value_retention_v19_findings.md`.
 
 V21 retained v20's actor, PPO budget, simulator physics and action set while changing only the matching-label supervised loss. Its matched listwise, separately trained frozen, same-weight frozen and strong-control comparisons are now audited and closed above.
+
+V22 qualification protocol `docs/sparse_skill_opportunity_v22_prelock.md` fixes two sparse N5/K3 skill masks using static topology only, 32 fresh F1-visited raw seeds per case, and a within-state equal-residual-count/different-capacity exposure gate. No cost is interpreted and no learner runs in this stage. If the gate passes, a full learning pilot still requires a separate prelock.
 
 Follow `docs/experiment_workflow.md`: separately justify and prelock any new scientific experiment, test and run bounded Ubuntu smoke, audit before outcome interpretation, preserve failed and partial artifacts, and commit/push only relevant verified changes. The user's explicit lab-run authorization applies here, but no new TEST, SSH/rsync or destructive Git action is authorized. Do not tune v21's loss or gates on its held-out panel.
