@@ -1,5 +1,16 @@
 # Maintenance Capacity Coordination
 
+## Current JCST/1.1 source
+
+The repository now includes JCST/1.1 physics, S/F/A PPO actors, C1/L1/L2/L3 protocols, collectors, independent replay/statistical auditors, and focused tests. Read [RESEARCH_BRIEF.md](RESEARCH_BRIEF.md), [CURRENT_STATE.md](CURRENT_STATE.md), and [AGENTS.md](AGENTS.md). The state file is a synced research snapshot, not live lab monitoring.
+
+For native Windows setup, read [JCST source handoff](docs/jcst_source_handoff.md). Existing lab runners still have Unix-specific resource/timeout/process code; Windows validation and versioned compatibility entry points are required before a native run. This source publication does not start a scientific campaign. Raw JCST artifacts and sealed TEST data are not published.
+
+## Historical migration/V14 baseline
+
+The material below documents the original migration baseline and is historical context for the current JCST work.
+
+
 A learning-based framework for coordinating maintenance demand and heterogeneous technician capacity.
 
 This repository contains tested maintenance-demand/capacity coordination pilots. Their results are mixed; they do not yet establish a general learning benefit or a new RL algorithm. Read [RESEARCH_BRIEF.md](RESEARCH_BRIEF.md), [CURRENT_STATE.md](CURRENT_STATE.md), then [AGENTS.md](AGENTS.md).
