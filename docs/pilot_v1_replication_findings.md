@@ -1,6 +1,6 @@
 # Coordination pilot v1 — DEV and replication findings
 
-Date: 2026-10-22 (Asia/Taipei). Protocol: [`coordination_pilot_v1.md`](coordination_pilot_v1.md). These findings use the unchanged `shared_maintenance_requests_v1` and `pending_matching_completion_v1` simulators. No sealed TEST seed has been evaluated.
+Date: 2026-10-22 (Asia/Taipei). Here “replication” means held-out physical-seed evaluation of fixed selected checkpoints, not independent training replication. Protocol: [`coordination_pilot_v1.md`](coordination_pilot_v1.md). These findings use the unchanged `shared_maintenance_requests_v1` and `pending_matching_completion_v1` simulators. No sealed TEST seed has been evaluated.
 
 ## Audit and panel
 

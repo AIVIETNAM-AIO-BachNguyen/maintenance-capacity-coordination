@@ -1,0 +1,94 @@
+{
+  "budgets": {
+    "arms": 3,
+    "artifact_disk_cap_bytes": 21474836480,
+    "bootstrap_draws": 10000,
+    "cases": 2,
+    "checkpoints": [
+      24000,
+      48000,
+      72000,
+      96000,
+      144000,
+      192000,
+      288000,
+      384000
+    ],
+    "elapsed_hours_cap": 72,
+    "evaluation_physical_seeds_per_case": 128,
+    "memory_cap_kib": 8388608,
+    "no_gpu": true,
+    "roots_per_arm_case": 10,
+    "scientific_workers_added": 1,
+    "torch_threads": 1
+  },
+  "config_hashes": {
+    "base": "dc40e0386c072b3f083ef24e28366c7605ddacc003fe094e7c28ed1aa111e0bc",
+    "generalist": "1c2d72f6bdd92c404a3155464dec9e673d7775a4117a7bb4620e9f21a70c33ec"
+  },
+  "contract_sha256": "490a33c4e13d61bbdc0afdf29bf304f6a33283ab55a7d09639d0926f03e23c78",
+  "design_lock_sha256": "588aac3858fb60d9c86df4b40e305f47d8112d77b41dcdd5fbbd27ef051727c6",
+  "engineering_manifest_sha256": "ee6655da5f59aad78da304541d3db353c8467ad678f09ba78d4aeb524a801a21",
+  "engineering_pipeline_sha256": "dd5192bf7cf677cf2f6a18d85b7bdb113e2c22658312c4defd17d0ce0eb3aa6a",
+  "engineering_qualified": true,
+  "engineering_reports": {
+    "analysis": {
+      "path": "artifacts/jcst_sample_efficiency/smoke-20261027T180805.684008Z/analysis-20261027T180952.334412Z/report.json",
+      "sha256": "2da3fdafffe6f39ecbb87173f494602d429eae242fa8f21a8ec77669d1284d53",
+      "status": "ANALYZED"
+    },
+    "replay": {
+      "path": "artifacts/jcst_sample_efficiency/smoke-20261027T180805.684008Z/audit-20261027T180930.194943Z/report.json",
+      "sha256": "ae5592188aa958a819c0a40d3a4891abfe3d841a9afd2c38f8268212793eeb93",
+      "status": "PASS"
+    },
+    "stats": {
+      "path": "artifacts/jcst_sample_efficiency/smoke-20261027T180805.684008Z/stats-audit-20261027T180956.739544Z/report.json",
+      "sha256": "980651cb4cef988c8c2de67f18dc67207dd5f90d54aad85665f0c81e57db6ff8",
+      "status": "PASS"
+    }
+  },
+  "engineering_run": "artifacts/jcst_sample_efficiency/smoke-20261027T180805.684008Z",
+  "git_head": "ee9f6deb20702343fc0d2f0182b73c8d3e5611a5",
+  "git_status": " M CURRENT_STATE.md\n?? docs/claim_evidence_v13_v22.md\n?? docs/jcst_c1_findings.md\n?? docs/jcst_characterization_protocol_v1.md\n?? docs/jcst_engineering_validation_v1.md\n?? docs/jcst_framework_l1_findings.md\n?? docs/jcst_framework_protocol_v1.md\n?? docs/jcst_framework_stage0.md\n?? docs/jcst_learnability_evidence_map_l2.md\n?? docs/jcst_learnability_interpretation_amendment_l2_20261026.md\n?? docs/jcst_learnability_l1_wait_diagnostic.md\n?? docs/jcst_learnability_l2_confirmation_audit_erratum.md\n?? docs/jcst_learnability_l2_confirmation_findings.md\n?? docs/jcst_learnability_l2_dev_qualification.md\n?? docs/jcst_learnability_protocol_l2.md\n?? docs/jcst_learnability_recovery_l2.md\n?? docs/jcst_learnability_stage0_l2.md\n?? docs/jcst_matched_architecture_parallel_amendment_l3_20261027.md\n?? docs/jcst_matched_architecture_protocol_l3.md\n?? docs/jcst_sample_efficiency_design_lock_se1_20261028.json\n?? docs/jcst_sample_efficiency_design_lock_se1_20261028_v2.json\n?? docs/jcst_sample_efficiency_parallel_amendment_se1_20261028.md\n?? docs/jcst_sample_efficiency_protocol_se1.md\n?? docs/joint_component_qualification_migration_v1.md\n?? docs/joint_component_service_contract_v1.md\n?? docs/problem_setting_demand_capacity_20261025.md\n?? docs/problem_setting_formulation_v2.md\n?? docs/problem_setting_qualification_v2.md\n?? docs/research_gate_roadmap_20261025.md\n?? docs/rodriguez_2022_primary_and_gap_audit.md\n?? docs/score_decoder_alignment_diagnostic_prelock.md\n?? experiments/diagnose_score_decoder_alignment.py\n?? experiments/jcst_analysis_audit_v1.py\n?? experiments/jcst_analyze_v1.py\n?? experiments/jcst_campaign_audit_v1.py\n?? experiments/jcst_campaign_collect_v1.py\n?? experiments/jcst_confirmation_report_v1.py\n?? experiments/jcst_diagnostic_analyze_v1.py\n?? experiments/jcst_diagnostic_audit_v1.py\n?? experiments/jcst_diagnostic_collect_v1.py\n?? experiments/jcst_diagnostic_rollout_analyze_v1.py\n?? experiments/jcst_engineering_smoke.py\n?? experiments/jcst_framework_report_v1.py\n?? experiments/jcst_framework_stats_audit_v1.py\n?? experiments/jcst_l1_wait_diagnostic_l2.py\n?? experiments/jcst_learnability_analysis_l2.py\n?? experiments/jcst_learnability_audit_l2.py\n?? experiments/jcst_learnability_confirmation_audit_l2.py\n?? experiments/jcst_learnability_inference_benchmark_l2.py\n?? experiments/jcst_learnability_l2.py\n?? experiments/jcst_learnability_optimization_audit_l2.py\n?? experiments/jcst_learnability_preconfirmation_lock_l2.py\n?? experiments/jcst_learnability_report_l2.py\n?? experiments/jcst_learnability_resume_l2.py\n?? experiments/jcst_learnability_stage3_l2.py\n?? experiments/jcst_learnability_stats_audit_l2.py\n?? experiments/jcst_learnability_trial_audit_l2.py\n?? experiments/jcst_learner_audit_v1.py\n?? experiments/jcst_learner_audit_v2.py\n?? experiments/jcst_learner_audit_v3.py\n?? experiments/jcst_learner_campaign_v1.py\n?? experiments/jcst_matched_architecture_analysis_l3.py\n?? experiments/jcst_matched_architecture_audit_l3.py\n?? experiments/jcst_matched_architecture_l3.py\n?? experiments/jcst_matched_architecture_stats_audit_l3.py\n?? experiments/jcst_matched_sfa_dev_l2.py\n?? experiments/jcst_replay_audit.py\n?? experiments/jcst_sample_efficiency_analyze_se1.py\n?? experiments/jcst_sample_efficiency_audit_se1.py\n?? experiments/jcst_sample_efficiency_pipeline_se1.py\n?? experiments/jcst_sample_efficiency_se1.py\n?? experiments/jcst_sample_efficiency_stats_audit_se1.py\n?? experiments/jcst_tiny_dp_v1.py\n?? src/ht_pdm_fjsp/component_controllers_v1.py\n?? src/ht_pdm_fjsp/component_framework_v1.py\n?? src/ht_pdm_fjsp/component_service_v1.py\n?? src/ht_pdm_fjsp/jcst_characterization_v1.py\n?? src/ht_pdm_fjsp/jcst_diagnostics_v1.py\n?? src/ht_pdm_fjsp/jcst_learner_l2.py\n?? src/ht_pdm_fjsp/jcst_learner_v1.py\n?? tests/test_component_service_v1.py\n?? tests/test_jcst_characterization_v1.py\n?? tests/test_jcst_diagnostics_v1.py\n?? tests/test_jcst_learnability_l2.py\n?? tests/test_jcst_learnability_later_l2.py\n?? tests/test_jcst_learner_v1.py\n?? tests/test_jcst_sample_efficiency_se1.py\n?? tests/test_jcst_tiny_dp_v1.py\n",
+  "inventory": {
+    "disk_free_bytes": 373234749440,
+    "duplicate_SE1_run": false,
+    "existing_L2_pid": 3288502,
+    "existing_L3_pid": 3313819,
+    "logical_cpus": 16,
+    "mem_available_kib": 51272616,
+    "mem_total_kib": 65678196
+  },
+  "locked_utc": "2026-10-27T18:12:39.288148+00:00",
+  "protocol_sha256": "3a4c5cccf41b07a5ab1f7056f2a249e0ebd100f496bfb14b112e74e21ef5272e",
+  "scheduling_amendment_sha256": "d94e7505bc66e6e0e7563340724411853ec87c8c8d10fc892e7d72afc7119342",
+  "schema": "JCST-SE1-prelaunch-lock",
+  "sealed_TEST_opened": false,
+  "source_hashes": {
+    "experiments/jcst_learnability_l2.py": "4b0fd879c5b992e925992af6b376e2098981967e88775e1062f3f696cd367c1b",
+    "experiments/jcst_learner_campaign_v1.py": "7851736ca2b541986c3e73ba79d0df08b6d7a021f15691a46863d4c99835f38b",
+    "experiments/jcst_sample_efficiency_analyze_se1.py": "13f32a44d888fe5feb820edbde12b2c8fd9201cd876fa48cc12a6f8b895eb3e5",
+    "experiments/jcst_sample_efficiency_audit_se1.py": "f61802ab168ad338c0236f239fa8f83a1d1e051445c249687dd869ae230731b4",
+    "experiments/jcst_sample_efficiency_pipeline_se1.py": "2000a17fc210abb096fdbaf102ea37b12761a75f6513f1d5128add20448f8833",
+    "experiments/jcst_sample_efficiency_se1.py": "0d35ca078fcf6b414dd9e3e68933b9ebb23efdc45cb373590a88e4cb32661ec9",
+    "experiments/jcst_sample_efficiency_stats_audit_se1.py": "e89036b13635c90bcbbdab87268c210202b5dd3cedea3217ac3f8bb360c75f20",
+    "src/ht_pdm_fjsp/component_controllers_v1.py": "afddc7e5e1cb32411228b453734a0711dd060d61d4633cc403f72c3390059a12",
+    "src/ht_pdm_fjsp/component_framework_v1.py": "6ee71274ff339cdd4017c24806926157f6aa2658c103f1c5c4562004640d83a1",
+    "src/ht_pdm_fjsp/component_service_v1.py": "f286de65010d6d94dc3dcda72a809f44f82f01179d63c9cadb4c86013bc3adea",
+    "src/ht_pdm_fjsp/jcst_characterization_v1.py": "6798464de722c918fe3a52a24adef135ac33d68c1e8fbf3592e57de09529d672",
+    "src/ht_pdm_fjsp/jcst_learner_l2.py": "2d23030aee9819a1cbdc470967aa9eff0f9433a589d1178a2f1751e9ede47dee",
+    "src/ht_pdm_fjsp/jcst_learner_v1.py": "871940a327bdf56db4055b6400b4ef78a17ae7dee22dbf6c21088d30ddf635bb"
+  },
+  "status": "PRELAUNCH_LOCKED",
+  "tests": {
+    "count": 279,
+    "errors": 0,
+    "failures": 0,
+    "junit": "artifacts/jcst_sample_efficiency/smoke-20261027T180805.684008Z/pytest.xml",
+    "junit_sha256": "a4c866bea800cbf3c13fe8ebcb57965a1be47820b528340be1df6ed28fd954b0",
+    "log": "artifacts/jcst_sample_efficiency/smoke-20261027T180805.684008Z/pytest.log",
+    "log_sha256": "bbe503184deb1423d4e33217199d5a9ee6d495787ef01df2eb9b3d13a6a025d3",
+    "skipped": 0
+  }
+}

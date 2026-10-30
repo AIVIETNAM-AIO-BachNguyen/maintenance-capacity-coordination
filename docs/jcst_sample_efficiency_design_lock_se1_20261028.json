@@ -1,0 +1,15 @@
+{
+  "active_at_lock": {
+    "L2_replication": "artifacts/jcst_learnability/replication-20261027T091525.639861Z/manifest.json",
+    "L3_collection": "artifacts/jcst_matched_architecture/collect-20261027T094717.495781Z/manifest.json"
+  },
+  "contract": "docs/joint_component_service_contract_v1.md",
+  "contract_sha256": "490a33c4e13d61bbdc0afdf29bf304f6a33283ab55a7d09639d0926f03e23c78",
+  "locked_utc": "2026-10-27T17:54:35.713262+00:00",
+  "next_gate": "terminal L2/L3 independent audits, SE1 implementation/tests/Linux smoke, then immutable prelaunch source/config lock",
+  "protocol": "docs/jcst_sample_efficiency_protocol_se1.md",
+  "protocol_sha256": "52be3be5dae331782c160f06883278f00d0698052e26a8d63e1903c57c9520c7",
+  "schema": "JCST-SE1-pre-outcome-design-lock",
+  "scientific_se1_rows_opened": false,
+  "status": "DESIGN_LOCKED_NOT_LAUNCHED"
+}
